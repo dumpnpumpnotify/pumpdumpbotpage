@@ -1,1 +1,1707 @@
-<h1>Hello</h1>
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr" class="bp-xs bp-sm bp-md bp-lg bp-xl bp-xxl dom-ready" style="--body-scroll-width: 16px;">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telegram Pump&Dump Bot</title>
+    <link rel="icon" type="image/png" href="favicon.ico">
+    <meta name="description" content="Get real-time Binance trading signals for futures and spot markets. Our Telegram bot detects pumps, dumps, and new listings to help you trade smarter on Binance, Bybit, KuCoin, and more!">
+    <meta name="keywords"
+          content="crypto trading signals, Binance signals, futures trading, spot trading, Bybit signals, KuCoin signals, pump and dump alerts, crypto bot, Binance trading bot, arbitrage trading, market analysis, crypto alerts, real-time trading signals, Telegram trading bot">
+    <link rel="canonical" href="https://dumpnpumpnotify.github.io/pumpdumpbotpage/">
+    <meta name="theme-color" content="#FFBA00">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Pump&Dump Bot">
+    <meta property="og:description" content="Get real-time Binance trading signals for futures and spot markets. Our Telegram bot detects pumps, dumps, and new listings to help you trade smarter on Binance, Bybit, KuCoin, and more!">
+    <meta property="og:url" content="https://dumpnpumpnotify.github.io/pumpdumpbotpage/">
+    <meta property="og:site_name" content="Pump&Dump Bot">
+    <meta property="og:image" content="https://dumpnpumpnotify.github.io/pumpdumpbotpage/seo-image.jpg">
+    <meta property="og:image:width" content="1180">
+    <meta property="og:image:height" content="600">
+    <meta property="og:image:type" content="image/png">
+
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Pump&Dump Bot">
+    <meta name="twitter:description" content="Get real-time Binance trading signals for futures and spot markets. Our Telegram bot detects pumps, dumps, and new listings">
+    <meta name="twitter:image" content="https://dumpnpumpnotify.github.io/pumpdumpbotpage/seo-image.jpg">
+
+    <link rel="canonical" href="https://dumpnpumpnotify.github.io/pumpdumpbotpage/">
+
+    <!-- preload head styles -->
+    <link rel="preload" href="./index_files/unicons.min.css" as="style">
+    <link rel="preload" href="./index_files/swiper-bundle.min.css" as="style">
+    <link rel="preload" href="./index_files/magic-cursor.min.css" as="style">
+
+    <link href="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.css" type="text/css" rel="stylesheet" />
+    <link rel="stylesheet" media="all" href="./index_files/custom.css" />
+
+    <!-- preload footer scripts -->
+
+    <link rel="preload" href="./index_files/jquery.min.js" as="script">
+    <link rel="preload" href="./index_files/scrollmagic.min.js" as="script">
+    <link rel="preload" href="./index_files/swiper-bundle.min.js" as="script">
+    <link rel="preload" href="./index_files/anime.min.js" as="script">
+    <link rel="preload" href="./index_files/typed.min.js" as="script">
+    <link rel="preload" href="./index_files/tilt.min.js" as="script">
+    <link rel="preload" href="./index_files/split-type.min.js" as="script">
+    <link rel="preload" href="./index_files/prettify.min.js" as="script">
+    <link rel="preload" href="./index_files/gsap.min.js" as="script">
+    <link rel="preload" href="./index_files/magic-cursor.js" as="script">
+    <link rel="preload" href="./index_files/data-attr-helper.js" as="script">
+    <link rel="preload" href="./index_files/swiper-helper.js" as="script">
+    <link rel="preload" href="./index_files/splitype-helper.js" as="script">
+    <link rel="preload" href="./index_files/anime-helper.js" as="script">
+    <link rel="preload" href="./index_files/typed-helper.js" as="script">
+    <link rel="preload" href="./index_files/tilt-helper.js" as="script">
+    <link rel="preload" href="./index_files/marquee.js" as="script">
+    <link rel="preload" href="./index_files/uikit-components-bs.js" as="script">
+    <link rel="preload" href="./index_files/app.js" as="script">
+
+
+    <!-- app head for bootstrap core -->
+    <script src="./index_files/app-head-bs.js"></script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <style>
+        .uc-pageloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 99999;
+            background-color: white;
+        }
+
+        .uc-dark .uc-pageloader, .uc-pageloader:where(.uc-dark) {
+            background-color: #131313;
+        }
+
+        .uc-pageloader > .loading {
+            display: inline-block;
+            position: relative;
+            width: 40px;
+            height: 40px;
+        }
+
+        .uc-pageloader > .loading > div {
+            box-sizing: border-box;
+            display: block;
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            margin: 0;
+            border: 4px solid transparent;
+            border-radius: 50%;
+            animation: uc-loading 1s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+            border-color: var(--color-primary) transparent transparent transparent;
+        }
+
+        .uc-pageloader > .loading > div:nth-child(1) {
+            animation-delay: -0.1s;
+        }
+
+        .uc-pageloader > .loading > div:nth-child(2) {
+            animation-delay: -0.2s;
+        }
+
+        .uc-pageloader > .loading > div:nth-child(3) {
+            animation-delay: -0.3s;
+        }
+
+        @keyframes uc-loading {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        html.show-preloader body {
+            display: none;
+        }
+    </style>
+
+    <!-- include uni-core components -->
+    <link rel="stylesheet" href="./index_files/uni-core.min.css">
+
+    <!-- include styles -->
+    <link rel="stylesheet" href="./index_files/unicons.min.css">
+    <link rel="stylesheet" href="./index_files/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./index_files/prettify.min.css">
+    <link rel="stylesheet" href="./index_files/magic-cursor.min.css">
+
+    <!-- include main style -->
+    <link rel="stylesheet" href="./index_files/main.min.purge.css">
+
+    <!-- include scripts -->
+    <script src="./index_files/uni-core-bundle.min.js"></script>
+</head>
+<body class="uni-body panel uni-body panel bg-gray-700 text-white overflow-x-hidden disable-cursor">
+
+<!--  Menu panel -->
+<div id="uc-menu-panel" data-uc-offcanvas="overlay: true;" class="uc-offcanvas">
+    <div class="uc-offcanvas-bar m-1 rounded-2 border border-2 border-black contrast-shadow-md bg-secondary-200 text-dark dark:bg-gray-900 dark:text-white"
+         role="dialog" aria-modal="true">
+        <header class="uc-offcanvas-header hstack justify-between items-center pb-2">
+            <div class="uc-logo">
+                <a href="/"
+                   class="h5 text-none text-gray-900 dark:text-white">
+                    <img class="w-40px" src="./index_files/logo-mark.svg" alt="Pump&Dump Bot">
+                </a>
+            </div>
+            <button class="uc-offcanvas-close rtl:end-auto rtl:start-0 m-1 mt-2 p-0 btn border-0 dark:text-white dark:text-opacity-50 hover:text-primary hover:rotate-90 duration-150 transition-all"
+                    type="button">
+                <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"
+                     class="icon icon-3 uc-svg">
+                    <path d="M53.557 9.221c-.16.166-.453.374-.81.566-.672.368-1.12.666-2.075 1.386-1.29.976-1.904 1.542-4.832 4.475-1.584 1.59-3.397 3.365-4.027 3.952-1.952 1.819-3.146 2.976-5.44 5.28-3.168 3.179-4.357 4.347-4.421 4.347-.053 0-1.221-.982-3.765-3.168a156.706 156.706 0 01-2.4-2.118c-1.531-1.402-2.646-2.464-5.174-4.928a299.636 299.636 0 00-6.213-5.872c-1.675-1.546-2.427-2.197-3.045-2.629-.411-.293-.571-.325-.966-.213-.176.048-.202.074-.202.218 0 .315.272.71 1.146 1.67.294.32.811.896 1.147 1.28 1.888 2.144 3.483 3.904 7.461 8.24 1.574 1.706 4.448 4.586 6.379 6.378.88.816 2.027 1.888 2.544 2.384l.95.902-1.537 1.584a504.02 504.02 0 00-2.09 2.165c-.31.325-1.232 1.285-2.059 2.133-1.717 1.771-2.256 2.358-4.016 4.368-2.507 2.854-4.363 4.822-5.963 6.331-1.424 1.344-2.197 2.15-2.373 2.475a4.031 4.031 0 00-.459 1.69c-.032.715.048 1.147.288 1.552.102.171.182.331.182.358 0 .026.144.17.314.314.763.63 1.702.678 2.555.128.576-.368 3.973-3.845 6.843-7.002 2.56-2.816 3.04-3.312 7.37-7.627 2.555-2.539 4.656-4.613 4.678-4.613.037 0 .954.981 2.293 2.453 1.861 2.048 2.736 2.955 6.187 6.453 3.306 3.344 4.133 4.214 5.866 6.16 1.654 1.856 2.566 2.806 3.6 3.734.15.133.475.426.731.656.95.864 1.53 1.269 1.877 1.317.294.043.619-.032.768-.176.134-.128.39-.597.347-.64-.01-.016.016-.09.07-.17.138-.209.165-.88.053-1.366-.112-.507-.304-.837-.79-1.36-.56-.603-1.2-1.355-2.01-2.368-1.424-1.77-3.27-3.685-6.512-6.747-2.454-2.314-4.88-4.73-6.614-6.586a131.182 131.182 0 00-2.65-2.774c-.507-.512-.923-.954-.928-.981-.006-.021.341-.416.762-.88a76.74 76.74 0 001.243-1.365 439.45 439.45 0 003.733-4.352c.091-.107.736-.859 1.44-1.675 2.288-2.645 3.046-3.579 4.694-5.76 1.28-1.701 1.136-1.51 2.224-2.88a63.98 63.98 0 011.728-2.08c1.514-1.728 1.952-2.283 2.288-2.923.304-.576.453-1.034.453-1.397 0-.245-.021-.32-.133-.427-.214-.218-.422-.181-.71.128z"
+                          fill="#000"></path>
+                </svg>
+            </button>
+        </header>
+
+        <div class="panel">
+            <ul class="nav-y gap-narrow fw-medium fs-6 uc-nav" data-uc-nav="">
+                <li><a href="#info-algo">How it works</a></li>
+                <li><a href="#roadmap">Roadmap</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li class="hr opacity-10 my-1"></li>
+                <li><a href="#get-access">Get access</a></li>
+            </ul>
+            <ul class="nav-x gap-1 mt-4">
+                <li>
+                    <a class="w-32px hover:-rotate-3" href="https://x.com/DUMPnPUMPNotify"><img
+                            src="./index_files/twitter.svg" alt="twitter"></a>
+                </li>
+                <li>
+                    <a class="w-32px hover:-rotate-3" href="mailto:dumpnpumpnotify@gmail.com">dumpnpumpnotify@gmail.com</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!--  Bottom Actions Sticky -->
+<div class="backtotop-wrap position-fixed bottom-0 end-0 z-99 m-2 vstack uc-active">
+    <a class="btn btn-sm p-0 bg-yellow text-black border border-2 border-black contrast-shadow-sm w-48px h-48px rounded-circle"
+       href="/" data-uc-backtotop="">
+        <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"
+             class="icon icon-3 uc-svg">
+            <path d="M31.494 19.152c-.235.059-.475.112-.54.128-.122.027-.234.23-.234.421 0 .107-.043.134-.304.192-.72.16-1.616.566-2.096.95-.133.106-.741.629-1.36 1.157-.613.533-1.84 1.568-2.72 2.299-.88.736-1.984 1.68-2.453 2.101-1.152 1.03-3.568 3.456-5.419 5.44-3.75 4.021-4 4.325-5.621 6.907-.459.73-1.061 1.669-1.333 2.08-.272.41-.523.837-.56.949-.086.272 0 .645.26 1.125.502.934.614 1.11.8 1.243.107.08.268.213.364.299.117.112.223.16.33.154.39-.01.678-.256 2.726-2.277a494.212 494.212 0 012.746-2.693c.41-.4 2.214-2.166 4-3.92 4.352-4.278 5.05-4.944 6.88-6.56 2.854-2.523 4.357-3.979 4.768-4.608.123-.192.379-.656.57-1.035.289-.565.363-.677.417-.619.037.043.32.384.624.763.512.64.922 1.115 2.875 3.339.693.789 1.946 2.24 2.746 3.173.64.757 1.765 2.01 2.64 2.96a418.923 418.923 0 005.093 5.333c.672.688 1.595 1.638 2.054 2.102 1.173 1.205 1.872 1.861 2.426 2.282.267.198.587.448.72.555.134.107.337.24.449.299.431.224 1.349.026 1.717-.368.144-.155.459-.731.437-.8a.493.493 0 01.075-.203c.16-.304.218-.87.192-1.819-.043-1.285-.144-1.573-.939-2.554-.8-.982-1.568-1.691-4.49-4.134-3.494-2.922-4.683-3.962-7.489-6.581-1.04-.965-2.752-2.48-3.471-3.072-.273-.219-.86-.699-1.307-1.067a134.988 134.988 0 01-2.843-2.373c-.64-.555-.677-.597-.677-.79 0-.191-.01-.202-.336-.357-.187-.09-.373-.16-.416-.16a.366.366 0 01-.176-.08.401.401 0 00-.181-.08c-.043 0-.134-.048-.209-.106-.165-.128-.186-.128-.735.005z"
+                  fill="#000"></path>
+        </svg>
+    </a>
+</div>
+
+<!-- Header start -->
+<header class="uc-header header-three uc-navbar-sticky-wrap z-999 uc-dark uc-sticky uc-sticky-below uc-sticky-fixed"
+        data-uc-sticky="start: 100vh; animation: uc-animation-slide-top; sel-target: .uc-navbar-container; cls-active: uc-navbar-sticky; cls-inactive: uc-navbar-transparent; end: !*;"
+        style="position: fixed !important; width: 1472.67px !important; margin-top: 0px !important; top: 0px;">
+    <nav class="uc-navbar-container bg-transparent mt-3 xl:mt-4 uc-navbar-float ft-tertiary z-1 uc-navbar-sticky"
+         data-anime="translateY: [-40, 0]; opacity: [0, 1]; duration: 750; delay: 0;"
+         style="transform: translateY(0px); opacity: 1;">
+        <div class="uc-navbar-main" style="--uc-nav-height: 100px">
+            <div class="container">
+                <div class="uc-navbar min-h-64px lg:min-h-80px xl:min-h-100px ps-2 pe-1 lg:px-4 bg-white bg-opacity-10 rounded-2 lg:rounded-3 border border-1 border-black backdrop-2"
+                     data-uc-navbar=" animation: uc-animation-slide-top-small; duration: 150;">
+                    <div class="uc-navbar-left">
+                        <div class="uc-logo">
+                            <a class="panel text-none w-150px xl:w-auto d-flex" href="/">
+                                🤖 <span class="wow-font">PampDump&nbsp;Bot</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="uc-navbar-center">
+                        <ul class="uc-navbar-nav fs-4 gap-3 lg:gap-4 d-none lg:d-flex fw-semibold text-white" data-uc-scrollspy-nav="closet: &gt; *; offset: 48; scroll: true;">
+                            <li><a href="#info-algo" class="">How it works</a></li></li>
+                            <li><a href="#roadmap" class="uc-active">Roadmap</a></li>
+                            <li><a href="#faq" class="">FAQ</a></li>
+                        </ul>
+                    </div>
+                    <div class="uc-navbar-right">
+                        <a class="btn btn-sm xl:btn-md border border-2 border-black bg-gradient-45n from-secondary to-tertiary contrast-shadow -rotate-2 hover:rotate-0 d-none lg:d-inline-flex"
+                           style="--shadowColor: var(--color-secondary)"
+                           href="#get-access">
+                            <span class="text-black">Get access</span>
+                        </a>
+                        <a class="btn btn-md btn-secondary w-48px h-48px p-0 border border-2 border-black contrast-shadow-sm d-inline-flex lg:d-none"
+                           href="#uc-menu-panel" data-uc-toggle=""
+                           role="button">
+                            <svg width="64" height="64" viewBox="0 0 64 64" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg" class="icon icon-3 uc-svg">
+                                <path d="M21.493 7.899c-.837.02-2.933.08-4.666.128-1.728.042-3.28.106-3.44.138-1.75.336-2.363.534-2.843.918-.283.229-.517.602-.517.82 0 .198.17.56.421.908.363.5 1.872 1.552 2.56 1.786.336.118.421.123 1.765.107 1.632-.01 3.179-.07 6.907-.25 5.056-.251 7.6-.331 11.093-.363 3.771-.038 7.051.08 13.094.469 3.658.235 4.858.293 6.106.293 1.936 0 2.939-.282 3.291-.933.08-.144.139-.277.139-.293a.601.601 0 01.053-.176c.037-.086.064-.256.064-.39 0-.208-.016-.245-.144-.298-.09-.038-.512-.064-1.03-.07a10.958 10.958 0 01-1.466-.101c-2.523-.395-3.797-.597-5.253-.832a256.675 256.675 0 00-7.84-1.12c-2.928-.363-5.115-.56-7.84-.699-1.462-.07-8.544-.101-10.454-.042zM28.8 28.89c-3.333.091-11.605.47-13.333.609-1.286.101-2.662.309-3.307.496l-1.013.277c-.97.25-1.734.603-2.544 1.157-1.275.87-1.243 1.472.128 2.294.725.442 2.288 1.056 3.322 1.312 1.206.298 1.264.298 4.72.085.704-.043 2.795-.165 4.64-.267 1.851-.1 4.635-.256 6.187-.346a455.77 455.77 0 014.187-.214c.746-.032 1.53-.064 1.733-.08.208-.01 3.53-.048 7.387-.074 3.856-.032 7.685-.08 8.507-.112 3.189-.118 5.173-.342 5.78-.65.198-.102.278-.193.417-.444.09-.176.17-.368.17-.42a.43.43 0 01.086-.198c.053-.054.096-.24.117-.47.038-.464.005-.506-.538-.768-.944-.458-2.928-.832-6.086-1.152-1.755-.181-9.072-.72-11.92-.885-2.874-.16-6.128-.219-8.64-.15zm-5.146 21.489c-1.403.042-3.307.138-3.76.186-1.717.176-3.472.512-5.547 1.056-2.981.784-4.64 1.382-4.842 1.75-.086.149.106.453.426.672.742.506 2.95 1.248 5.275 1.77.896.198 2.501.475 3.114.534.209.021 5.707.042 12.214.053 6.512.005 12.176.027 12.587.048 4.565.23 8.16.304 9.183.187 1.552-.171 2.384-.619 2.79-1.504.096-.214.197-.432.23-.491.084-.16.111-.843.042-.976-.117-.219-1.243-.715-2.245-.992-1.014-.272-3.878-.843-6.32-1.259-3.078-.522-5.648-.773-9.814-.965-1.13-.048-12.112-.107-13.333-.07z"
+                                      fill="#000"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+<div class="uc-sticky-placeholder" style="height: 0px; width: 1472.67px; margin: 0px;"></div>
+
+<!-- Header end -->
+
+<!-- Wrapper start -->
+<div id="wrapper" class="wrap">
+
+    <!-- Hero start -->
+    <div id="hero_header" class="hero-header section panel overflow-hidden">
+        <div class="section-outer py-9 lg:py-10 min-h-650px sm:min-h-600px lg:min-h-750px xl:min-h-1170px">
+            <img class="position-absolute start-0 top-0 w-100 d-none sm:d-block" src="./index_files/hero.svg"
+                 alt="Image">
+            <img class="position-absolute start-0 top-0 w-100 mt-8 sm:d-none" src="./index_files/hero-mobile-01.svg"
+                 alt="Image">
+            <img class="position-absolute start-0 bottom-0 w-100 sm:d-none" src="./index_files/hero-mobile-02.svg"
+                 alt="Image">
+            <div class="container">
+                <div class="section-inner panel">
+                    <div class="panel vstack items-center gap-2 lg:gap-3 xl:gap-4 sm:max-w-650px lg:max-w-800px xl:max-w-1000px mx-auto text-center px-2 lg:px-0 mt-7 sm:mt-9 xl:mt-10"
+                         data-anime="targets: &gt;*; translateY: [24, 0]; opacity: [0, 1]; delay: anime.stagger(100, {start: 200});">
+                        <h1 class="h5 sm:h2 lg:h1 xl:display-6 mb-0 ls-0 text-white text-uppercase ls-0 xl:mt-4" style="transform: translateY(0px); opacity: 1;">
+                            <span class="text-tertiary">Catch </span><span class="text-gradient bg-gradient-45n from-secondary to-tertiary">the Crypto Waves </span>Before They Surge!</h1>
+                        <p class="fs-4 xl:fs-3" style="transform: translateY(0px); opacity: 1;">Get instant pump & dump alerts. Simple, fast, and clear for everyone!</p>
+                        <div class="vstack sm:hstack justify-center gap-3 mt-1 sm:mt-2"
+                             style="transform: translateY(0px); opacity: 1;">
+                            <a class="btn btn-md sm:btn-xl xl:btn-2xl px-4 xl:px-6 border border-3 border-black bg-gradient-45n from-secondary to-tertiary contrast-shadow -rotate-2 hover:rotate-0"
+                               style="--shadowColor: var(--color-secondary)"
+                               href="#get-access">
+                                <span class="text-black">Get access now!</span>
+                                <span class="fs-4 mb-narrow">🚀</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero end -->
+
+    <!-- Text Marquee Start -->
+    <div class="h3 xl:h2 fw-medium py-4 xl:py-6 my-3 reverse bg-secondary -rotate-2 text-black text-uppercase ls-0"
+         data-uc-marquee="clone: 3; gap: 64; reverse: true;" style="--gap: 64px;">
+        <div>
+            <div class="hstack gap-8">
+                <div>$</div>
+                <span>CRYPTO</span>
+                <div>$</div>
+                <span>BINANCE</span>
+                <div>$</div>
+                <span>FUTURES</span>
+                <div>$</div>
+                <span>SPOT</span>
+            </div>
+            <div class="hstack gap-8">
+                <div>$</div>
+                <span>TRADING</span>
+                <div>$</div>
+                <span>ALERTS</span>
+                <div>$</div>
+                <span>PUMP</span>
+                <div>$</div>
+                <span>DUMP</span>
+            </div>
+            <div class="hstack gap-8">
+                <div>$</div>
+                <span>BINANCE</span>
+                <div>$</div>
+                <span>FUTURES</span>
+                <div>$</div>
+                <span>SPOT</span>
+                <div>$</div>
+                <span>BYBIT</span>
+            </div>
+            <div class="hstack gap-8">
+                <div>$</div>
+                <span>CRYPTO</span>
+                <div>$</div>
+                <span>VOLUME</span>
+                <div>$</div>
+                <span>TREND</span>
+                <div>$</div>
+                <span>ANALYSIS</span>
+            </div>
+
+            <div class="hstack gap-8">
+                <div>$</div>
+                <span>VOLATILITY</span>
+                <div>$</div>
+                <span>SIGNALS</span>
+                <div>$</div>
+                <span>MARKET</span>
+                <div>$</div>
+                <span>ARBITRAGE</span>
+            </div>
+            <div class="hstack gap-8">
+                <div>$</div>
+                <span>WHITELIST</span>
+                <div>$</div>
+                <span>SUBSCRIPTION</span>
+                <div>$</div>
+                <span>AI BOT</span>
+                <div>$</div>
+                <span>TRADINGVIEW</span>
+            </div>
+            <div class="hstack gap-8">
+                <div>$</div>
+                <span>NEW LISTINGS</span>
+                <div>$</div>
+                <span>SCALPING</span>
+                <div>$</div>
+                <span>SWING TRADING</span>
+                <div>$</div>
+                <span>LONG</span>
+            </div>
+            <div class="hstack gap-8">
+                <div>$</div>
+                <span>SHORT</span>
+                <div>$</div>
+                <span>ORDER BOOK</span>
+                <div>$</div>
+                <span>LEVERAGE</span>
+                <div>$</div>
+                <span>OPEN INTEREST</span>
+            </div>
+
+            <div class="hstack gap-8">
+                <div>$</div>
+                <span>REAL-TIME</span>
+                <div>$</div>
+                <span>ALGO TRADING</span>
+                <div>$</div>
+                <span>RISK MANAGEMENT</span>
+                <div>$</div>
+                <span>HISTORICAL DATA</span>
+            </div>
+            <div class="hstack gap-8">
+                <div>$</div>
+                <span>PRICE ACTION</span>
+                <div>$</div>
+                <span>BREAKOUT</span>
+                <div>$</div>
+                <span>SUPPORT</span>
+                <div>$</div>
+                <span>RESISTANCE</span>
+            </div>
+            <div class="hstack gap-8">
+                <div>$</div>
+                <span>SMART TRADING</span>
+                <div>$</div>
+                <span>STRATEGY</span>
+                <div>$</div>
+                <span>CANDLESTICK</span>
+                <div>$</div>
+                <span>REVERSAL</span>
+            </div>
+            <div class="hstack gap-8">
+                <div>$</div>
+                <span>LIQUIDITY</span>
+                <div>$</div>
+                <span>MARGIN</span>
+                <div>$</div>
+                <span>DEFI</span>
+                <div>$</div>
+                <span>TRADING BOT</span>
+            </div>
+
+            <div class="hstack gap-8">
+                <div>$</div>
+                <span>HEDGE</span>
+                <div>$</div>
+                <span>STOP-LOSS</span>
+                <div>$</div>
+                <span>PROFIT</span>
+                <div>$</div>
+                <span>ENTRY</span>
+            </div>
+            <div class="hstack gap-8">
+                <div>$</div>
+                <span>ALTCOIN WEEK</span>
+                <div>$</div>
+                <span>BITCOIN WEEK</span>
+                <div>$</div>
+                <span>ALTCOINS</span>
+                <div>$</div>
+                <span>BITCOIN</span>
+            </div>
+            <div class="hstack gap-8">
+                <div>$</div>
+                <span>USDT</span>
+                <div>$</div>
+                <span>PERPETUAL</span>
+                <div>$</div>
+                <span>CONTRACTS</span>
+                <div>$</div>
+                <span>BINANCE API</span>
+            </div>
+            <div class="hstack gap-8">
+                <div>$</div>
+                <span>FAST ALERTS</span>
+                <div>$</div>
+                <span>LIVE SIGNALS</span>
+                <div>$</div>
+                <span>MARKET DATA</span>
+                <div>$</div>
+                <span>24/7 MONITORING</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Text Marquee end -->
+
+    <!-- Section start -->
+    <div id="about" class="about section panel overflow-hidden">
+        <div class="section-outer panel pt-6 sm:pt-8 lg:pt-9 xl:pt-10">
+            <div class="container sm:max-w-md xl:max-w-lg">
+                <div class="section-inner panel">
+                    <div class="section-header panel sm:max-w-500px xl:max-w-650px mx-auto mb-4 sm:mb-8 xl:mb-9 text-center"
+                         data-anime="onview: -300; targets: &gt;*; translateY: [24, 0]; opacity: [0, 1]; delay: anime.stagger(100, {start: 200});">
+                        <div class="category" style="transform: translateY(0px); opacity: 1;">
+                            <div class="rotate-2">
+                                <span class="fs-5 xl:fs-4 text-secondary fw-bold">How it works</span>
+                            </div>
+                        </div>
+                        <div class="title" style="transform: translateY(0px); opacity: 1;">
+                            <h2 class="h5 sm:h3 xl:h2 mb-0 mt-2 text-white text-uppercase ls-0 -rotate-1">Fast trading made simple—here’s how! 🚀</h2>
+                        </div>
+                        <div class="desc mt-3 sm:mt-4" style="transform: translateY(0px); opacity: 1;">
+                            <p class="fs-6 sm:fs-5 xl:fs-4 mb-2">Trade smarter, not harder! Our Telegram bot keeps you ahead of the market with real-time signals, price alerts, and key insights.</p>
+                            <ul style="text-align:left; list-style: none;">
+                                <li>⚡ Instant Alerts – Stay updated on new Binance listings, price spikes, and market movements.</li>
+                                <li>🌍 Multi-Language Support – Get signals in your preferred language.</li>
+                                <li>📊 Smart Market Analysis – Tracks price, volume, and open interest to detect pumps and dumps.</li>
+                                <li>📉 Catch Reversals – Get notified when a coin hits a new all-time low.</li>
+                            </ul>
+                            <p class="fs-6 sm:fs-5 xl:fs-4">Whether you're trading futures or spot, our bot helps you make better moves—fast and easy! 🌟</p>
+                        </div>
+                    </div>
+                    <div class="section-content"
+                         data-anime="onview: -200; translateY: [48, 0]; opacity: [0, 1]; delay: 200;"
+                         style="transform: translateY(0px); opacity: 1;">
+                        <img src="./index_files/01.svg" alt="Image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Section end -->
+
+    <!-- Section start -->
+    <div id="info-top-50" class="about section panel overflow-hidden">
+        <div class="section-outer panel pt-6 sm:pt-8 lg:pt-9 xl:pt-10">
+            <div class="container sm:max-w-md xl:max-w-lg">
+                <div class="section-inner panel">
+                    <div class="section-header panel sm:max-w-500px xl:max-w-650px mx-auto mb-4 sm:mb-8 xl:mb-9 text-center"
+                         data-anime="onview: -300; targets: &gt;*; translateY: [24, 0]; opacity: [0, 1]; delay: anime.stagger(100, {start: 200});">
+                        <div class="category" style="transform: translateY(0px); opacity: 1;">
+                            <div>
+                                <span class="fs-5 xl:fs-4 text-secondary fw-bold">⚡ Tracking the Most Volatile Pairs:</span>
+                            </div>
+                        </div>
+                        <div class="desc mt-3 sm:mt-4" style="transform: translateY(0px); opacity: 1;">
+                            <p class="fs-6 sm:fs-5 xl:fs-4 mb-2 text-m-align">Our bot keeps an eye on the most explosive coins so you don’t have to!</p>
+                            <p class="text-m-align">At startup, the bot scans all trading pairs and selects the top
+                                50 most volatile ones. These high-action coins are monitored every 5 minutes to catch sudden price movements fast.</p>
+                            <p class="text-m-align">The rest of the market isn’t ignored—other pairs are checked every 15
+                                minutes to ensure you still get important updates without overload.</p>
+                            <p class="text-m-align">With this system, you stay informed about the most dynamic
+                                coins while keeping an eye on the bigger picture!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section start -->
+    <div id="info-algo" class="about section panel overflow-hidden">
+        <div class="section-outer panel pt-6 sm:pt-8 lg:pt-9 xl:pt-10">
+            <div class="container sm:max-w-md xl:max-w-lg">
+                <div class="section-inner panel">
+                    <div class="section-header panel sm:max-w-500px xl:max-w-650px mx-auto mb-4 sm:mb-8 xl:mb-9 text-center"
+                         data-anime="onview: -300; targets: &gt;*; translateY: [24, 0]; opacity: [0, 1]; delay: anime.stagger(100, {start: 200});">
+                        <div class="category" style="transform: translateY(0px); opacity: 1;">
+                            <div>
+                                <span class="fs-5 xl:fs-4 text-secondary fw-bold">📊 Real-Time Market Trend Analysis</span>
+                            </div>
+                        </div>
+                        <div class="desc mt-3 sm:mt-4 mb-2" style="transform: translateY(0px); opacity: 1;">
+                            <p class="fs-6 sm:fs-5 xl:fs-4 mb-2 text-m-align">Stay ahead of the market with real-time pump
+                                and dump detection! Our bot continuously analyzes price movements, volume shifts, and
+                                open interest changes to spot potential trading opportunities.</p>
+                        </div>
+
+                        <div class="category" style="transform: translateY(0px); opacity: 1;">
+                            <div>
+                                <span class="fs-5 xl:fs-4 text-secondary fw-bold">🔎 How It Works</span>
+                            </div>
+                        </div>
+                        <div class="desc mt-3 sm:mt-4 mb-6" style="transform: translateY(0px); opacity: 1;">
+                            <p class="fs-6 sm:fs-5 xl:fs-4 mb-2 text-m-align">At each monitoring interval, the bot:</p>
+                            <p class="text-m-align">✅ Compares the previous price vs. current price</p>
+                            <p class="text-m-align">✅ Tracks volume changes to measure buying and selling pressure</p>
+                            <p class="text-m-align">✅ Analyzes open interest shifts to see if traders are entering or exiting positions</p>
+                        </div>
+
+                        <div class="category" style="transform: translateY(0px); opacity: 1;">
+                            <div>
+                                <span class="fs-5 xl:fs-4 text-secondary fw-bold">🚀 Pump & Dump Detection</span>
+                            </div>
+                        </div>
+                        <div class="desc mt-3 sm:mt-4 mb-6" style="transform: translateY(0px); opacity: 1;">
+                            <p class="fs-6 sm:fs-5 xl:fs-4 mb-2 text-m-align">If a coin’s price jumps +3%, it's flagged as a pump.
+                                If it drops -5%, it's marked as a dump. But it’s not just about price—our bot digs deeper
+                                into trading activity to send precise signals:</p>
+
+                            <div class="features-item p-3 border border-1 border-gray-100 border-opacity-40 rounded-3 mt-4 mb-4" style="background: linear-gradient(20deg, #ffffff17, #0d042c)">
+                                <p style="text-align:left;">🔥 Strong Pump – High market participation, strong momentum.</p>
+                            </div>
+
+                            <div class="features-item p-3 border border-1 border-gray-100 border-opacity-40 rounded-3 mt-4 mb-4" style="background: linear-gradient(20deg, #ffffff17, #0d042c)">
+                                <p style="text-align:left;">🤔 Moderate Pump – Possible price pullback ahead.</p>
+                            </div>
+
+                            <div class="features-item p-3 border border-1 border-gray-100 border-opacity-40 rounded-3 mt-4 mb-4" style="background: linear-gradient(20deg, #ffffff17, #0d042c)">
+                                <p style="text-align:left;">🏴‍☠️ Fake Pump – Traders closing positions, potential manipulation.</p>
+                            </div>
+
+                            <div class="features-item p-3 border border-1 border-gray-100 border-opacity-40 rounded-3 mt-4 mb-4" style="background: linear-gradient(20deg, #ffffff17, #0d042c)">
+                                <p style="text-align:left;">⚠️ Strong Dump – Large traders exiting, liquidity dropping.</p>
+                            </div>
+
+                            <div class="features-item p-3 border border-1 border-gray-100 border-opacity-40 rounded-3 mt-4 mb-4" style="background: linear-gradient(20deg, #ffffff17, #0d042c)">
+                                <p style="text-align:left;">📉 Moderate Dump – Potential local recovery ahead.</p>
+                            </div>
+
+                            <div class="features-item p-3 border border-1 border-gray-100 border-opacity-40 rounded-3 mt-4 mb-4" style="background: linear-gradient(20deg, #ffffff17, #0d042c)">
+                                <p style="text-align:left;">🔻 Gradual Decline – Market correcting without panic.</p>
+                            </div>
+
+                            <div class="features-item p-3 border border-1 border-gray-100 border-opacity-40 rounded-3 mt-4 mb-4" style="background: linear-gradient(20deg, #ffffff17, #0d042c)">
+                                <p style="text-align:left;">📊 Uncertain Trend – Mixed signals, stay cautious.</p>
+                            </div>
+
+                            <div class="category" style="transform: translateY(0px); opacity: 1;">
+                                <div>
+                                    <span class="fs-5 xl:fs-4 text-secondary fw-bold">🖼️ Visual Trading Insights</span>
+                                </div>
+                            </div>
+                            <div class="desc mt-3 sm:mt-4 mb-6" style="transform: translateY(0px); opacity: 1;">
+                                <p class="fs-6 sm:fs-5 xl:fs-4 mb-2 text-m-align">For every pump or dump signal, the bot sends:</p>
+                                <p class="text-m-align">📌 A TradingView chart with the latest price movement.</p>
+                                <p class="text-m-align">🔗 A direct link to the coin for quick action.</p>
+                                <p class="text-m-align">With this data-driven approach, you’ll always know when to enter,
+                                    exit, or wait—helping you trade smarter, not harder! 🚀</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a class="zoom-image" href="./images/04.jpg" data-featherlight="image"><img src="./images/04.jpg" /></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a class="zoom-image" href="./images/04.jpg" data-featherlight="image"><img src="./images/04.jpg" /></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a class="zoom-image" href="./images/05.jpg" data-featherlight="image"><img src="./images/05.jpg" /></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a class="zoom-image" href="./images/06.jpg" data-featherlight="image"><img src="./images/06.jpg" /></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a class="zoom-image" href="./images/07.jpg" data-featherlight="image"><img src="./images/07.jpg" /></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a class="zoom-image" href="./images/08.jpg" data-featherlight="image"><img src="./images/08.jpg" /></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a class="zoom-image" href="./images/09.jpg" data-featherlight="image"><img src="./images/09.jpg" /></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a class="zoom-image" href="./images/10.jpg" data-featherlight="image"><img src="./images/10.jpg" /></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a class="zoom-image" href="./images/11.jpg" data-featherlight="image"><img src="./images/11.jpg" /></a>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section start -->
+    <div id="info-language" class="about section panel overflow-hidden">
+        <div class="section-outer panel pt-6 sm:pt-8 lg:pt-9 xl:pt-10">
+            <div class="container sm:max-w-md xl:max-w-lg">
+                <div class="section-inner panel">
+                    <div class="section-header panel sm:max-w-500px xl:max-w-650px mx-auto mb-4 sm:mb-8 xl:mb-9 text-center"
+                         data-anime="onview: -300; targets: &gt;*; translateY: [24, 0]; opacity: [0, 1]; delay: anime.stagger(100, {start: 200});">
+                        <div class="category" style="transform: translateY(0px); opacity: 1;">
+                            <h2 class="h5 sm:h3 xl:h2 mb-0 mt-2 text-white text-uppercase ls-0">What else?</h2>
+                            <div class="mt-4">
+                                <span class="fs-5 xl:fs-4 text-secondary fw-bold">🌍 Multi-Language Support:</span>
+                            </div>
+                        </div>
+                        <div class="desc mt-3 sm:mt-4" style="transform: translateY(0px); opacity: 1;">
+                            <p class="fs-6 sm:fs-5 xl:fs-4 mb-2">No matter where you're from, we've got you covered!
+                                Our bot supports multiple languages, ensuring that you can receive all alerts and messages
+                                in the language you're most comfortable with. Whether you speak English, Español, Français,
+                                or one of many other languages, our bot makes sure you're always in the loop.</p>
+                            <div class="two-col">
+                                <ul style="text-align:left;">
+                                    <li>English</li>
+                                    <li>Español</li>
+                                    <li>Français</li>
+                                    <li>Deutsch</li>
+                                    <li>Dansk</li>
+                                    <li>Português</li>
+                                    <li>Русский</li>
+                                    <li>Українська</li>
+                                    <li>Қазақша</li>
+                                    <li>Polski</li>
+                                    <li>简体中文</li>
+                                    <li>हिंदी</li>
+                                    <li>বাংলা</li>
+                                </ul>
+                                <a class="zoom-image" href="./images/01.jpg" data-featherlight="image"><img src="./images/01.jpg" alt="Multi-Language Support" loading="lazy"></a>
+                            </div>
+                            <p class="fs-6 sm:fs-5 xl:fs-4">Simply select your preferred language from the menu and start receiving updates in your language of choice!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section start -->
+    <div id="info-new-listings" class="about section panel overflow-hidden">
+        <div class="section-outer panel pt-6 sm:pt-8 lg:pt-9 xl:pt-10">
+            <div class="container sm:max-w-md xl:max-w-lg">
+                <div class="section-inner panel">
+                    <div class="section-header panel sm:max-w-500px xl:max-w-650px mx-auto mb-4 sm:mb-8 xl:mb-9 text-center"
+                         data-anime="onview: -300; targets: &gt;*; translateY: [24, 0]; opacity: [0, 1]; delay: anime.stagger(100, {start: 200});">
+                        <div class="category" style="transform: translateY(0px); opacity: 1;">
+                            <div>
+                                <span class="fs-5 xl:fs-4 text-secondary fw-bold">🌟 New Listings Alerts:</span>
+                            </div>
+                        </div>
+                        <div class="desc mt-3 sm:mt-4" style="transform: translateY(0px); opacity: 1;">
+                            <div class="two-col">
+                                <div>
+                                    <p class="fs-6 sm:fs-5 xl:fs-4 mb-2 text-m-align">Stay ahead of the curve with our bot's New Listings
+                                        Alerts! We track every new coin listed on Binance, so you don’t miss out on early trading opportunities.</p>
+                                    <p class="text-m-align">Every 5 minutes, the bot checks for fresh listings and sends you a prompt with a
+                                        link to the new coin. This means you can act fast and catch price spikes right
+                                        as they happen—giving you the edge in volatile markets.</p>
+                                    <div class="features-item p-3 border border-1 border-gray-100 border-opacity-40 rounded-3 mt-4 mb-4" style="background: linear-gradient(20deg, #ffffff17, #0d042c)">
+                                        <p style="text-align:left;">🚀 New Binance listings:<br>🔹 SHELL_USDT: 🔗Binance | 📊 TradingView</p>
+                                    </div>
+
+                                    <p class="text-m-align">With this feature, you’ll be one of the first to know about exciting new assets,
+                                        helping you start trading right when the action begins!</p>
+                                </div>
+                                <a class="zoom-image" href="./images/02.jpg" data-featherlight="image"><img src="./images/02.jpg" alt="New Listings Alerts" loading="lazy"></a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section start -->
+    <div id="info-lowest" class="about section panel overflow-hidden">
+        <div class="section-outer panel pt-6 sm:pt-8 lg:pt-9 xl:pt-10">
+            <div class="container sm:max-w-md xl:max-w-lg">
+                <div class="section-inner panel">
+                    <div class="section-header panel sm:max-w-500px xl:max-w-650px mx-auto mb-4 sm:mb-8 xl:mb-9 text-center"
+                         data-anime="onview: -300; targets: &gt;*; translateY: [24, 0]; opacity: [0, 1]; delay: anime.stagger(100, {start: 200});">
+                        <div class="category" style="transform: translateY(0px); opacity: 1;">
+                            <div>
+                                <span class="fs-5 xl:fs-4 text-secondary fw-bold">📉 Historical Lows Alerts:</span>
+                            </div>
+                        </div>
+                        <div class="desc mt-3 sm:mt-4" style="transform: translateY(0px); opacity: 1;">
+
+                            <div class="two-col">
+                                <div>
+                                    <p class="fs-6 sm:fs-5 xl:fs-4 mb-2 text-m-align">Never miss a potential reversal!
+                                        Our bot tracks the historical lows of each coin, so you’re alerted whenever a
+                                        price dips below its all-time low.</p>
+                                    <p class="text-m-align">If a coin hits a new low, the bot sends you an instant
+                                        notification with the message:</p>
+
+                                    <div class="features-item p-3 border border-1 border-gray-100 border-opacity-40 rounded-3 mt-4 mb-4" style="background: linear-gradient(20deg, #ffffff17, #0d042c)">
+                                        <p style="text-align:left;">⚠️ **New all-time low!**<br>📉 *TRUMPUSDT* dropped: *11 USDT*<br>🚀 Possible reversal signal.<br>🔗 [Binance]</p>
+                                    </div>
+
+                                    <p class="text-m-align">This can help you spot potential buying opportunities as the market recovers.</p>
+                                    <p class="text-m-align">Stay proactive with this powerful feature, and be one of
+                                        the first to know when a coin is at its lowest point, ready for a possible comeback!</p>
+                                </div>
+
+                                <a class="zoom-image" href="./images/03.jpg" data-featherlight="image"><img src="./images/03.jpg" alt="Historical Lows Alerts" loading="lazy"></a>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section start -->
+    <div id="info-altcoin-week" class="about section panel overflow-hidden">
+        <div class="section-outer panel pt-6 sm:pt-8 lg:pt-9 xl:pt-10">
+            <div class="container sm:max-w-md xl:max-w-lg">
+                <div class="section-inner panel">
+                    <div class="section-header panel sm:max-w-500px xl:max-w-650px mx-auto mb-4 sm:mb-8 xl:mb-9 text-center"
+                         data-anime="onview: -300; targets: &gt;*; translateY: [24, 0]; opacity: [0, 1]; delay: anime.stagger(100, {start: 200});">
+                        <div class="category" style="transform: translateY(0px); opacity: 1;">
+                            <div>
+                                <span class="fs-5 xl:fs-4 text-secondary fw-bold">🌍 Altcoin vs. Bitcoin Week Insights:</span>
+                            </div>
+                        </div>
+                        <div class="desc mt-3 sm:mt-4" style="transform: translateY(0px); opacity: 1;">
+                            <div class="two-col mb-4">
+                                <div>
+                                    <p class="fs-6 sm:fs-5 xl:fs-4 mb-2 text-m-align">Want to know if the market favors altcoins
+                                        or Bitcoin? Our bot tracks the overall trend and tells you which assets are leading the way!</p>
+                                    <p class="text-m-align">Every 7 days, the bot analyzes the top 50 most volatile
+                                        coins and compares their performance against Bitcoin:</p>
+
+                                    <div class="features-item p-3 border border-1 border-gray-100 border-opacity-40 rounded-3 mt-4 mb-4" style="background: linear-gradient(20deg, #ffffff17, #0d042c)">
+                                        <p style="text-align:left;">📈 Altcoin Week – If 75% or more of the top 50 coins
+                                            outperform Bitcoin, the market is shifting towards altcoins. This means more opportunities for altcoin traders!</p>
+                                    </div>
+                                    <div class="features-item p-3 border border-1 border-gray-100 border-opacity-40 rounded-3 mt-4 mb-4" style="background: linear-gradient(20deg, #ffffff17, #0d042c)">
+                                        <p style="text-align:left;">💰 Bitcoin Week – If only 25% or fewer of the
+                                            top 50 coins outperform Bitcoin, Bitcoin is dominating the market. This suggests traders are moving towards BTC as a safer bet.</p>
+                                    </div>
+                                </div>
+                                <a class="zoom-image" href="./images/12.jpg" data-featherlight="image"><img src="./images/12.jpg" alt="Historical Lows Alerts" loading="lazy"></a>
+                            </div>
+
+                            <div class="two-col">
+                                <div>
+                                    <p class="fs-6 sm:fs-5 xl:fs-4 mb-2 text-m-align">🔗 Stay Informed with Useful Links</p>
+                                    <p class="text-m-align">Along with the weekly market trend, the bot provides direct
+                                        links to Binance futures markets and relevant data so you can quickly check charts, trends, and opportunities.</p>
+                                    <p class="text-m-align">With this feature, you’ll always know whether to focus on
+                                        altcoins or stick with Bitcoin—helping you make smarter trading decisions! 🚀</p>
+                                </div>
+                                <a class="zoom-image" href="./images/13.jpg" data-featherlight="image"><img src="./images/13.jpg" alt="Historical Lows Alerts" loading="lazy"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section start -->
+    <div id="numbers" class="numbers section panel overflow-hidden">
+        <div class="section-outer panel py-6 sm:py-8 lg:py-9 xl:py-10">
+            <div class="container sm:max-w-lg">
+                <div class="section-inner panel">
+                    <div class="section-content panel text-center">
+                        <div class="row child-cols-12 sm:child-cols-6 justify-center g-4 sm:gx-3 sm:gy-6 xl:gx-4 xl:gy-8"
+                             data-anime="onview: -300; targets: &gt;*; translateY: [24, 0]; opacity: [0, 1]; delay: anime.stagger(100, {start: 200});">
+                            <div style="transform: translateY(0px); opacity: 1;">
+                                <div class="numbers-item vstack items-center gap-1 px-6 py-8 border border-1 border-gray-100 border-opacity-40 rounded-3 rotate-2"
+                                     style="background: linear-gradient(20deg, #ffffff17, #0d042c)">
+                                    <h2 class="h3 xl:h2 m-0 text-secondary">🎯</h2>
+                                    <span class="fs-5 xl:fs-4">REAL-TIME ALERTS</span>
+                                </div>
+                            </div>
+                            <div style="transform: translateY(0px); opacity: 1;">
+                                <div class="numbers-item vstack items-center gap-1 px-6 py-8 border border-1 border-gray-100 border-opacity-40 rounded-3 -rotate-2"
+                                     style="background: linear-gradient(20deg, #ffffff17, #0d042c)">
+                                    <h2 class="h3 xl:h2 m-0 text-secondary">100%</h2>
+                                    <span class="fs-5 xl:fs-4">User-friendly</span>
+                                </div>
+                            </div>
+                            <div style="transform: translateY(0px); opacity: 1;">
+                                <div class="numbers-item vstack items-center gap-1 px-6 py-8 border border-1 border-gray-100 border-opacity-40 rounded-3 -rotate-2"
+                                     style="background: linear-gradient(20deg, #ffffff17, #0d042c)">
+                                    <h2 class="h3 xl:h2 m-0 text-secondary">2024</h2>
+                                    <span class="fs-5 xl:fs-4">FOUNDED</span>
+                                </div>
+                            </div>
+                            <div style="transform: translateY(0px); opacity: 1;">
+                                <div class="numbers-item vstack items-center gap-1 px-6 py-8 border border-1 border-gray-100 border-opacity-40 rounded-3 rotate-2"
+                                     style="background: linear-gradient(20deg, #ffffff17, #0d042c)">
+                                    <h2 class="h3 xl:h2 m-0 text-secondary">24/7</h2>
+                                    <span class="fs-5 xl:fs-4">TRADE MONITORING</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Section end -->
+
+    <!-- Section start -->
+    <div id="tokenomics" class="tokenomics section panel">
+        <div class="section-outer panel py-4 sm:py-6 lg:py-8 xl:py-10">
+            <div class="container sm:max-w-lg xl:max-w-xl">
+                <div class="section-inner panel">
+                    <div class="section-header panel sm:max-w-600px xl:max-w-800px mx-auto mb-6 sm:mb-8 xl:mb-9 text-center"
+                         data-anime="onview: -300; targets: &gt;*; translateY: [24, 0]; opacity: [0, 1]; delay: anime.stagger(100, {start: 200});">
+                        <h2 class="title h4 sm:h3 xl:h2 my-2 text-white text-uppercase ls-0"
+                            style="transform: translateY(0px); opacity: 1;">Trade Without Fear</h2>
+                        <p class="desc fs-6 sm:fs-5 xl:fs-4" style="transform: translateY(0px); opacity: 1;">Our user-friendly
+                            bot keeps you on track 24/7, so you never miss a signal and never have to worry about losing out.</p>
+                    </div>
+                    <div class="section-content panel">
+                        <div class="row child-cols-12 sm:child-cols-6 lg:child-cols-3 items-center g-4 sm:g-3 xl:g-5">
+                            <div class="order-2 sm:order-1">
+                                <div class="panel">
+                                    <div class="row child-cols-12 g-4 sm:g-8 xl:g-9"
+                                         data-anime="onview: -300; targets: &gt;*; translateY: [24, 0]; opacity: [0, 1]; delay: anime.stagger(100, {start: 400});">
+                                        <div style="transform: translateY(0px); opacity: 1;">
+                                            <div class="features-item p-3 border border-1 border-gray-100 border-opacity-40 rounded-3 rotate-2"
+                                                 style="background: linear-gradient(20deg, #ffffff17, #0d042c)">
+                                                <p class="fs-5 xl:fs-4">
+                                                    EASY TO USE: <br>
+                                                    No need for complicated setups. Just start and trade.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div style="transform: translateY(0px); opacity: 1;">
+                                            <div class="features-item p-3 border border-1 border-gray-100 border-opacity-40 rounded-3 -rotate-2"
+                                                 style="background: linear-gradient(20deg, #ffffff17, #0d042c)">
+                                                <p class="fs-5 xl:fs-4">
+                                                    24/7 ALERTS & TRACKING: <br>
+                                                    Never miss an important signal. Always stay informed.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col sm:d-none lg:d-block order-1 sm:order-2">
+                                <div class="features-image panel"
+                                     data-anime="onview: -300; translateY: [24, 0]; opacity: [0, 1]; delay: 200;"
+                                     style="transform: translateY(0px); opacity: 1;">
+                                    <img src="./index_files/02.svg" alt="Image">
+                                </div>
+                            </div>
+                            <div class="order-2 sm:order-2">
+                                <div class="panel">
+                                    <div class="row child-cols-12 g-4 sm:g-8 xl:g-9"
+                                         data-anime="onview: -300; targets: &gt;*; translateY: [24, 0]; opacity: [0, 1]; delay: anime.stagger(100, {start: 400});">
+                                        <div style="transform: translateY(0px); opacity: 1;">
+                                            <div class="features-item p-3 border border-1 border-gray-100 border-opacity-40 rounded-3 -rotate-2"
+                                                 style="background: linear-gradient(20deg, #ffffff17, #0d042c)">
+                                                <p class="fs-5 xl:fs-4">NO MORE MANUAL MONITORING</p>
+                                            </div>
+                                        </div>
+                                        <div style="transform: translateY(0px); opacity: 1;">
+                                            <div class="features-item p-3 border border-1 border-gray-100 border-opacity-40 rounded-3 rotate-2"
+                                                 style="background: linear-gradient(20deg, #ffffff17, #0d042c)">
+                                                <p class="fs-5 xl:fs-4">FEARLESS TRADE WITH CONFIDENCE <br> You won’t miss the right moment to act. Stay ahead with real-time signals.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section end -->
+
+    <!-- Text Marquee Start -->
+    <div class="h3 xl:h2 fw-medium py-4 xl:py-6 my-3 reverse bg-primary rotate-2 text-secondary text-uppercase ls-0"
+         data-uc-marquee="clone: 3; gap: 64; reverse: true;" style="--gap: 64px;">
+        <div>
+            <div class="hstack gap-8">
+                <div>$</div>
+                <span>CRYPTO</span>
+                <div>$</div>
+                <span>BINANCE</span>
+                <div>$</div>
+                <span>FUTURES</span>
+                <div>$</div>
+                <span>SPOT</span>
+            </div>
+            <div class="hstack gap-8">
+                <div>$</div>
+                <span>TRADING</span>
+                <div>$</div>
+                <span>ALERTS</span>
+                <div>$</div>
+                <span>PUMP</span>
+                <div>$</div>
+                <span>DUMP</span>
+            </div>
+            <div class="hstack gap-8">
+                <div>$</div>
+                <span>BINANCE</span>
+                <div>$</div>
+                <span>FUTURES</span>
+                <div>$</div>
+                <span>SPOT</span>
+                <div>$</div>
+                <span>BYBIT</span>
+            </div>
+            <div class="hstack gap-8">
+                <div>$</div>
+                <span>CRYPTO</span>
+                <div>$</div>
+                <span>VOLUME</span>
+                <div>$</div>
+                <span>TREND</span>
+                <div>$</div>
+                <span>ANALYSIS</span>
+            </div>
+
+            <div class="hstack gap-8">
+                <div>$</div>
+                <span>VOLATILITY</span>
+                <div>$</div>
+                <span>SIGNALS</span>
+                <div>$</div>
+                <span>MARKET</span>
+                <div>$</div>
+                <span>ARBITRAGE</span>
+            </div>
+            <div class="hstack gap-8">
+                <div>$</div>
+                <span>WHITELIST</span>
+                <div>$</div>
+                <span>SUBSCRIPTION</span>
+                <div>$</div>
+                <span>AI BOT</span>
+                <div>$</div>
+                <span>TRADINGVIEW</span>
+            </div>
+            <div class="hstack gap-8">
+                <div>$</div>
+                <span>NEW LISTINGS</span>
+                <div>$</div>
+                <span>SCALPING</span>
+                <div>$</div>
+                <span>SWING TRADING</span>
+                <div>$</div>
+                <span>LONG</span>
+            </div>
+            <div class="hstack gap-8">
+                <div>$</div>
+                <span>SHORT</span>
+                <div>$</div>
+                <span>ORDER BOOK</span>
+                <div>$</div>
+                <span>LEVERAGE</span>
+                <div>$</div>
+                <span>OPEN INTEREST</span>
+            </div>
+
+            <div class="hstack gap-8">
+                <div>$</div>
+                <span>REAL-TIME</span>
+                <div>$</div>
+                <span>ALGO TRADING</span>
+                <div>$</div>
+                <span>RISK MANAGEMENT</span>
+                <div>$</div>
+                <span>HISTORICAL DATA</span>
+            </div>
+            <div class="hstack gap-8">
+                <div>$</div>
+                <span>PRICE ACTION</span>
+                <div>$</div>
+                <span>BREAKOUT</span>
+                <div>$</div>
+                <span>SUPPORT</span>
+                <div>$</div>
+                <span>RESISTANCE</span>
+            </div>
+            <div class="hstack gap-8">
+                <div>$</div>
+                <span>SMART TRADING</span>
+                <div>$</div>
+                <span>STRATEGY</span>
+                <div>$</div>
+                <span>CANDLESTICK</span>
+                <div>$</div>
+                <span>REVERSAL</span>
+            </div>
+            <div class="hstack gap-8">
+                <div>$</div>
+                <span>LIQUIDITY</span>
+                <div>$</div>
+                <span>MARGIN</span>
+                <div>$</div>
+                <span>DEFI</span>
+                <div>$</div>
+                <span>TRADING BOT</span>
+            </div>
+
+            <div class="hstack gap-8">
+                <div>$</div>
+                <span>HEDGE</span>
+                <div>$</div>
+                <span>STOP-LOSS</span>
+                <div>$</div>
+                <span>PROFIT</span>
+                <div>$</div>
+                <span>ENTRY</span>
+            </div>
+            <div class="hstack gap-8">
+                <div>$</div>
+                <span>ALTCOIN WEEK</span>
+                <div>$</div>
+                <span>BITCOIN WEEK</span>
+                <div>$</div>
+                <span>ALTCOINS</span>
+                <div>$</div>
+                <span>BITCOIN</span>
+            </div>
+            <div class="hstack gap-8">
+                <div>$</div>
+                <span>USDT</span>
+                <div>$</div>
+                <span>PERPETUAL</span>
+                <div>$</div>
+                <span>CONTRACTS</span>
+                <div>$</div>
+                <span>BINANCE API</span>
+            </div>
+            <div class="hstack gap-8">
+                <div>$</div>
+                <span>FAST ALERTS</span>
+                <div>$</div>
+                <span>LIVE SIGNALS</span>
+                <div>$</div>
+                <span>MARKET DATA</span>
+                <div>$</div>
+                <span>24/7 MONITORING</span>
+            </div>
+        </div>
+    </div>
+    <!-- Text Marquee end -->
+
+    <!-- Section start -->
+    <div id="roadmap" class="roadmap section panel overflow-hidden">
+        <div class="section-outer panel py-6 sm:py-8 lg:py-9 xl:py-10">
+            <div class="container sm:max-w-lg xl:max-w-xl">
+                <div class="section-inner panel">
+                    <div class="section-header panel sm:max-w-500px xl:max-w-800px mx-auto mb-4 sm:mb-6 xl:mb-9 text-center"
+                         data-anime="onview: -300; targets: &gt;*; translateY: [24, 0]; opacity: [0, 1]; delay: anime.stagger(100, {start: 200});">
+                        <h2 class="h4 sm:h3 xl:h2 mb-0 mt-2 text-white text-uppercase ls-0"
+                            style="transform: translateY(0px); opacity: 1;">2025 Roadmap</h2>
+                    </div>
+                    <div class="section-content panel">
+                        <img class="position-absolute start-50 top-50 translate-middle d-none lg:d-block"
+                             src="./index_files/line.svg" alt="victor" style="height: 90%">
+                        <div class="row child-cols-12 items-center g-4 sm:g-6 lg:gx-10 lg:gy-8 xl:gy-9">
+                            <div class="sm:col-8 lg:col-6">
+                                <div class="roadmap-item panel"
+                                     data-anime="onview: -300; translateY: [48, 0]; opacity: [0, 1]; delay: 200;"
+                                     style="transform: translateY(0px); opacity: 1;">
+                                    <img src="./index_files/05.svg" alt="victor"
+                                         class="position-absolute z-1 w-150px xl:w-auto d-none lg:d-block"
+                                         style="top: -31%; left: 36%">
+                                    <img src="./index_files/05.svg" alt="victor"
+                                         class="position-absolute z-1 w-150px xl:w-auto d-none sm:d-block lg:d-none"
+                                         style="top: -31%; left: 24%">
+                                    <div class="px-3 sm:px-4 py-6 xl:px-6 xl:py-8 border border-1 border-gray-100 border-opacity-40 rounded-4 text-white bg-white bg-opacity-5 rotate-1"
+                                         style="background: linear-gradient(20deg, #ffffff17, #0d042c)">
+                                        <span class="fw-semibold text-opacity-70">✅ Completed!</span>
+                                        <h4 class="h5 my-2 xl:my-3 ft-primary text-secondary">Features Launched & Active</h4>
+                                        <ul class="uc-list uc-list-disc fs-5 xl:fs-4 m-0">
+                                            <li>Pump & Dump Signals</li>
+                                            <li class="m-0">Historical Price Data</li>
+                                            <li class="m-0">New Listings Alerts</li>
+                                            <li class="m-0">Multilingual Support</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sm:col-4 lg:col-6 d-none sm:d-block">
+                                <div class="panel">
+                                    <h4 class="h5 xl:h4 m-0 text-secondary -rotate-2">Phase #1</h4>
+                                    <img class="position-absolute top-0 d-none xl:d-block" src="./index_files/coin.svg"
+                                         alt="victor" style="left: -15.5%">
+                                    <img class="position-absolute top-0 w-40px d-none lg:d-block xl:d-none"
+                                         src="./index_files/coin.svg" alt="victor" style="left: -19.5%">
+                                </div>
+                            </div>
+                            <div class="sm:col-4 lg:col-6 d-none sm:d-block">
+                                <div class="panel">
+                                    <h4 class="h5 xl:h4 m-0 text-secondary rotate-2 float-end">Phase #2</h4>
+                                    <img class="position-absolute top-0 d-none xl:d-block" src="./index_files/coin.svg"
+                                         alt="victor" style="right: -15.5%">
+                                    <img class="position-absolute top-0 w-40px d-none lg:d-block xl:d-none"
+                                         src="./index_files/coin.svg" alt="victor" style="right: -19.5%">
+                                </div>
+                            </div>
+                            <div class="sm:col-8 lg:col-6">
+                                <div class="roadmap-item panel"
+                                     data-anime="onview: -300; translateY: [48, 0]; opacity: [0, 1]; delay: 200;"
+                                     style="transform: translateY(0px); opacity: 1;">
+                                    <img src="./index_files/06.svg" alt="victor"
+                                         class="position-absolute z-1 w-200px xl:w-auto d-none sm:d-block"
+                                         style="top: -31%; right: 5%">
+                                    <div class="px-3 sm:px-4 py-6 xl:px-6 xl:py-8 border border-1 border-gray-100 border-opacity-40 rounded-4 text-white bg-white bg-opacity-5 rotate-1"
+                                         style="background: linear-gradient(20deg, #ffffff17, #0d042c)">
+                                        <span class="fw-semibold text-opacity-70">⚙️ In progress!</span>
+                                        <h4 class="h5 my-2 xl:my-3 ft-primary text-secondary">AI-Enhanced Signal Analysis</h4>
+                                        <ul class="uc-list uc-list-disc fs-5 xl:fs-4 m-0">
+                                            <li>Improving signal accuracy and analysis</li>
+                                            <li class="m-0">Using AI to provide smarter, more reliable trading insights</li>
+                                            <li class="m-0">Processing user's feedbacks</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sm:col-8 lg:col-6">
+                                <div class="roadmap-item panel"
+                                     data-anime="onview: -300; translateY: [48, 0]; opacity: [0, 1]; delay: 200;"
+                                     style="transform: translateY(0px); opacity: 1;">
+                                    <img src="./index_files/07.svg" alt="victor"
+                                         class="position-absolute z-1 w-128px xl:w-auto d-none sm:d-block"
+                                         style="bottom: -7%; right: 7%">
+                                    <div class="px-3 sm:px-4 py-6 xl:px-6 xl:py-8 border border-1 border-gray-100 border-opacity-40 rounded-4 text-white bg-white bg-opacity-5 -rotate-2"
+                                         style="background: linear-gradient(20deg, #ffffff17, #0d042c)">
+                                        <span class="fw-semibold text-opacity-70">📢 Upcoming..</span>
+                                        <h4 class="h5 my-2 xl:my-3 ft-primary text-secondary">More features</h4>
+                                        <ul class="uc-list uc-list-disc fs-5 xl:fs-4 m-0">
+                                            <li>0. Closed Telegram group for sharing trade ideas, knowledge, user's feedbacks and more.</li>
+                                            <li>1. Customizable alerts and settings per user</li>
+                                            <li class="m-0">2. ????</li>
+                                            <li class="m-0">3. Profit! :D</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sm:col-4 lg:col-6 d-none sm:d-block">
+                                <div class="panel">
+                                    <h4 class="h5 xl:h4 m-0 text-secondary -rotate-2">Phase #3</h4>
+                                    <img class="position-absolute top-0 d-none xl:d-block" src="./index_files/coin.svg"
+                                         alt="victor" style="left: -15.5%">
+                                    <img class="position-absolute top-0 w-40px d-none lg:d-block xl:d-none"
+                                         src="./index_files/coin.svg" alt="victor" style="left: -19.5%">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section end -->
+
+    <!-- Text Marquee Start -->
+    <div class="h3 xl:h2 fw-medium py-4 xl:py-6 my-3 reverse bg-secondary -rotate-2 text-black text-uppercase ls-0"
+         data-uc-marquee="clone: 3; gap: 64; reverse: true;" style="--gap: 64px;">
+        <div>
+            <div class="hstack gap-8">
+                <div>$</div>
+                <span>CRYPTO</span>
+                <div>$</div>
+                <span>BINANCE</span>
+                <div>$</div>
+                <span>FUTURES</span>
+                <div>$</div>
+                <span>SPOT</span>
+            </div>
+            <div class="hstack gap-8">
+                <div>$</div>
+                <span>TRADING</span>
+                <div>$</div>
+                <span>ALERTS</span>
+                <div>$</div>
+                <span>PUMP</span>
+                <div>$</div>
+                <span>DUMP</span>
+            </div>
+            <div class="hstack gap-8">
+                <div>$</div>
+                <span>BINANCE</span>
+                <div>$</div>
+                <span>FUTURES</span>
+                <div>$</div>
+                <span>SPOT</span>
+                <div>$</div>
+                <span>BYBIT</span>
+            </div>
+            <div class="hstack gap-8">
+                <div>$</div>
+                <span>CRYPTO</span>
+                <div>$</div>
+                <span>VOLUME</span>
+                <div>$</div>
+                <span>TREND</span>
+                <div>$</div>
+                <span>ANALYSIS</span>
+            </div>
+
+            <div class="hstack gap-8">
+                <div>$</div>
+                <span>VOLATILITY</span>
+                <div>$</div>
+                <span>SIGNALS</span>
+                <div>$</div>
+                <span>MARKET</span>
+                <div>$</div>
+                <span>ARBITRAGE</span>
+            </div>
+            <div class="hstack gap-8">
+                <div>$</div>
+                <span>WHITELIST</span>
+                <div>$</div>
+                <span>SUBSCRIPTION</span>
+                <div>$</div>
+                <span>AI BOT</span>
+                <div>$</div>
+                <span>TRADINGVIEW</span>
+            </div>
+            <div class="hstack gap-8">
+                <div>$</div>
+                <span>NEW LISTINGS</span>
+                <div>$</div>
+                <span>SCALPING</span>
+                <div>$</div>
+                <span>SWING TRADING</span>
+                <div>$</div>
+                <span>LONG</span>
+            </div>
+            <div class="hstack gap-8">
+                <div>$</div>
+                <span>SHORT</span>
+                <div>$</div>
+                <span>ORDER BOOK</span>
+                <div>$</div>
+                <span>LEVERAGE</span>
+                <div>$</div>
+                <span>OPEN INTEREST</span>
+            </div>
+
+            <div class="hstack gap-8">
+                <div>$</div>
+                <span>REAL-TIME</span>
+                <div>$</div>
+                <span>ALGO TRADING</span>
+                <div>$</div>
+                <span>RISK MANAGEMENT</span>
+                <div>$</div>
+                <span>HISTORICAL DATA</span>
+            </div>
+            <div class="hstack gap-8">
+                <div>$</div>
+                <span>PRICE ACTION</span>
+                <div>$</div>
+                <span>BREAKOUT</span>
+                <div>$</div>
+                <span>SUPPORT</span>
+                <div>$</div>
+                <span>RESISTANCE</span>
+            </div>
+            <div class="hstack gap-8">
+                <div>$</div>
+                <span>SMART TRADING</span>
+                <div>$</div>
+                <span>STRATEGY</span>
+                <div>$</div>
+                <span>CANDLESTICK</span>
+                <div>$</div>
+                <span>REVERSAL</span>
+            </div>
+            <div class="hstack gap-8">
+                <div>$</div>
+                <span>LIQUIDITY</span>
+                <div>$</div>
+                <span>MARGIN</span>
+                <div>$</div>
+                <span>DEFI</span>
+                <div>$</div>
+                <span>TRADING BOT</span>
+            </div>
+
+            <div class="hstack gap-8">
+                <div>$</div>
+                <span>HEDGE</span>
+                <div>$</div>
+                <span>STOP-LOSS</span>
+                <div>$</div>
+                <span>PROFIT</span>
+                <div>$</div>
+                <span>ENTRY</span>
+            </div>
+            <div class="hstack gap-8">
+                <div>$</div>
+                <span>ALTCOIN WEEK</span>
+                <div>$</div>
+                <span>BITCOIN WEEK</span>
+                <div>$</div>
+                <span>ALTCOINS</span>
+                <div>$</div>
+                <span>BITCOIN</span>
+            </div>
+            <div class="hstack gap-8">
+                <div>$</div>
+                <span>USDT</span>
+                <div>$</div>
+                <span>PERPETUAL</span>
+                <div>$</div>
+                <span>CONTRACTS</span>
+                <div>$</div>
+                <span>BINANCE API</span>
+            </div>
+            <div class="hstack gap-8">
+                <div>$</div>
+                <span>FAST ALERTS</span>
+                <div>$</div>
+                <span>LIVE SIGNALS</span>
+                <div>$</div>
+                <span>MARKET DATA</span>
+                <div>$</div>
+                <span>24/7 MONITORING</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Text Marquee end -->
+
+    <!-- Section start -->
+    <div id="faq" class="faq section panel overflow-hidden">
+        <div class="section-outer panel py-6 sm:py-8 lg:py-9 xl:py-10">
+            <div class="container sm:max-w-md xl:max-w-lg">
+                <div class="section-inner panel"
+                     data-anime="onview: -300; targets: &gt;*; translateY: [24, 0]; opacity: [0, 1]; delay: anime.stagger(100, {start: 200});">
+                    <div class="section-header panel sm:max-w-500px xl:max-w-800px mx-auto mb-4 sm:mb-6 xl:mb-9 text-center"
+                         data-anime="onview: -300; targets: &gt;*; translateY: [24, 0]; opacity: [0, 1]; delay: anime.stagger(100, {start: 200});"
+                         style="transform: translateY(0px); opacity: 1;">
+                        <div class="category" style="transform: translateY(0px); opacity: 1;">
+                            <div class="-rotate-2">
+                                <span class="fs-5 xl:fs-4 text-secondary fw-bold">Asked Questions</span>
+                            </div>
+                        </div>
+                        <h2 class="h4 sm:h3 xl:h2 mb-0 mt-2 text-white text-uppercase ls-0"
+                            style="transform: translateY(0px); opacity: 1;">FAQ</h2>
+                    </div>
+                    <div class="section-content panel" style="transform: translateY(0px); opacity: 1;">
+                        <div class="row child-cols-12 g-3 sm:g-4">
+                            <div>
+                                <div class="faq-item panel p-3 sm:p-4 xl:px-6 xl:py-8 border border-1 border-gray-100 border-opacity-40 rounded-3 rotate-1"
+                                     style="background: linear-gradient(20deg, #ffffff17, #0d042c)">
+                                    <h4 class="h5 xl:h4 stroke-text mb-2">Where do the bot’s signals come from? 🤔</h4>
+                                    <p class="fs-5 xl:fs-4">Our bot analyzes real-time data from Binance Futures,
+                                        focusing on USDT-M futures. It tracks price movements, volume changes, and
+                                        market trends to deliver accurate trading signals.</p>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="faq-item panel p-3 sm:p-4 xl:px-6 xl:py-8 border border-1 border-gray-100 border-opacity-40 rounded-3 -rotate-1"
+                                     style="background: linear-gradient(20deg, #ffffff17, #0d042c)">
+                                    <h4 class="h5 xl:h4 stroke-text mb-2">Can I use these signals for spot trading? 💎</h4>
+                                    <p class="fs-5 xl:fs-4">Yes! Even though the bot is optimized for Binance Futures,
+                                        the signals are just as useful for spot trading because price movements on
+                                        futures and spot markets are closely linked.</p>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="faq-item panel p-3 sm:p-4 xl:px-6 xl:py-8 border border-1 border-gray-100 border-opacity-40 rounded-3 rotate-1"
+                                     style="background: linear-gradient(20deg, #ffffff17, #0d042c)">
+                                    <h4 class="h5 xl:h4 stroke-text mb-2">Are these signals relevant for other exchanges like Bybit? 📊</h4>
+                                    <p class="fs-5 xl:fs-4">Absolutely! Crypto markets are highly interconnected.
+                                        If a price pumps or dumps on Binance, the same movement usually happens on
+                                        Bybit, KuCoin, OKX, and other major exchanges.</p>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="faq-item panel p-3 sm:p-4 xl:px-6 xl:py-8 border border-1 border-gray-100 border-opacity-40 rounded-3 -rotate-1"
+                                     style="background: linear-gradient(20deg, #ffffff17, #0d042c)">
+                                    <h4 class="h5 xl:h4 stroke-text mb-2">❓Why do prices stay similar across different platforms?</h4>
+                                    <p class="fs-5 xl:fs-4">Thanks to arbitrage trading, price gaps between exchanges get closed almost instantly.
+                                        Large traders and automated bots buy low on one platform and sell high on another,
+                                        keeping prices nearly identical everywhere. <a href="https://www.coinbase.com/ru/learn/advanced-trading/what-is-crypto-arbitrage-trading">Understanding Crypto Arbitrage Trading</a></p>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="faq-item panel p-3 sm:p-4 xl:px-6 xl:py-8 border border-1 border-gray-100 border-opacity-40 rounded-3 rotate-1"
+                                     style="background: linear-gradient(20deg, #ffffff17, #0d042c)">
+                                    <h4 class="h5 xl:h4 stroke-text mb-2">How can I use these signals effectively?</h4>
+                                    <p class="fs-5 xl:fs-4">You can apply them to futures trading, spot trading, or even
+                                        arbitrage strategies. Since Binance is the largest crypto exchange, its price movements set the trend for the entire market.</p>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="faq-item panel p-3 sm:p-4 xl:px-6 xl:py-8 border border-1 border-gray-100 border-opacity-40 rounded-3 -rotate-1"
+                                     style="background: linear-gradient(20deg, #ffffff17, #0d042c)">
+                                    <h4 class="h5 xl:h4 stroke-text mb-2">Do I need a Binance account to benefit from these signals?</h4>
+                                    <p class="fs-5 xl:fs-4">No! Even if you trade on another exchange, our bot’s signals help
+                                        you spot market opportunities and make informed trades. Wherever you trade, you stay ahead of price movements! 🚀</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section-footer panel d-flex justify-center mt-6 sm:mt-8"
+                         data-anime="onview: -100; translateY: [24, 0]; opacity: [0, 1]; delay: 200;"
+                         style="transform: translateY(0px); opacity: 1;">
+                        <a class="btn btn-md sm:btn-xl xl:btn-2xl px-4 xl:px-6 border border-3 border-black bg-gradient-45n from-secondary to-tertiary contrast-shadow -rotate-2 hover:rotate-0"
+                           style="--shadowColor: var(--color-secondary)"
+                           href="mailto:dumpnpumpnotify@gmail.com">
+                            <span class="text-black">Still Have Questions?</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section end -->
+</div>
+
+
+<!-- Section start -->
+<div id="get-access" class="about section panel overflow-hidden">
+    <div class="section-outer panel pt-6 sm:pt-8 lg:pt-9 xl:pt-10">
+        <div class="container sm:max-w-md xl:max-w-lg">
+
+            <div class="section-content" data-anime="onview: -200; translateY: [48, 0]; opacity: [0, 1]; delay: 200;" style="transform: translateY(0px); opacity: 1;">
+                <img src="./index_files/01.svg" alt="Image">
+            </div>
+
+            <div class="section-inner panel">
+                <div class="section-header panel sm:max-w-500px xl:max-w-650px mx-auto mb-4 sm:mb-8 xl:mb-9 text-center"
+                     data-anime="onview: -300; targets: &gt;*; translateY: [24, 0]; opacity: [0, 1]; delay: anime.stagger(100, {start: 200});">
+                    <div class="category" style="transform: translateY(0px); opacity: 1;">
+                        <div>
+                            <span class="fs-5 xl:fs-4 text-secondary fw-bold">Buy</span>
+                        </div>
+                        <div class="title" style="transform: translateY(0px); opacity: 1;">
+                            <h2 class="h5 sm:h3 xl:h2 mb-0 mt-2 text-white text-uppercase ls-0 -rotate-1">How to Get Access to the Bot 🤖</h2>
+                        </div>
+                    </div>
+
+                    <div class="desc mt-3 sm:mt-4 mb-4" style="transform: translateY(0px); opacity: 1;">
+                        <p class="fs-6 sm:fs-5 xl:fs-4 mb-2 text-m-align">To start receiving real-time trading signals from our bot, follow these simple steps:</p>
+                        <ol style="text-align:left;" class="mb-2">
+                            <li class="mb-2">Make a Payment 💸<br>
+                                Send 50 USDT to our provided wallet address. This payment covers your 1-year subscription for access to the bot.</li>
+                            <li class="mb-2">Send Your Transaction Details 📧<br>
+                                After making the payment, email the transaction details (including the transaction ID)
+                                to our support email. Be sure to include your Telegram username so we can identify and whitelist you.</li>
+                            <li class="mb-2">Join the Whitelist ✅<br>
+                                Once we receive your transaction details, our team will add you to the whitelist within
+                                24 hours. You’ll then receive instructions on how to connect and start using the bot.</li>
+                        </ol>
+                        <p class="text-m-align">After being added to the whitelist, you'll receive signals directly in
+                            your Telegram account, helping you stay on top of market changes 24/7 📲💬.</p>
+                    </div>
+
+                    <div class="category" style="transform: translateY(0px); opacity: 1;">
+                        <div>
+                            <span class="fs-5 xl:fs-4 text-secondary fw-bold">Our wallet</span>
+                        </div>
+                    </div>
+                    <div class="pricing-item pricing-item--style-3 mt-2">
+                        <div class="row align-items-center">
+                            <div class="col-lg-1">
+                                <img src="./index_files/usdt-icon.png" width="75" height="75" alt="USDT">
+                            </div>
+                            <div class="col-lg-1">
+                                <h6 class="pricing-item__plan">USDT / TetherUS (TRX, Tron /TRC20)</h6>
+                            </div>
+                            <div class="col-lg-5"><span class="clipboard-usdt">TCfvrN1QL8rn2CaM54f6mqMrfHG8gyH2JB</span></div>
+                            <div class="col-lg-2 text-center">
+                                <img src="./index_files/usdt-adress.png" width="120" height="120" alt="USDT">
+                            </div>
+                            <div class="col-lg-3 text-lg-right"><a class="pricing-item__button button button--primary copy-clipboard" data-src="clipboard-usdt" href="#" data-once="clipboardButton"><i class="fa fa-copy"></i> Copy address</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- Wrapper end -->
+
+<!-- Footer start -->
+<footer id="uc-footer" class="uc-footer panel overflow-hidden">
+    <div class="footer-outer pt-6 lg:pt-9 xl:pt-10">
+        <img class="position-absolute top-0 start-0 w-full" src="./index_files/star.svg" alt="victor">
+        <div class="container sm:max-w-md xl:max-w-lg">
+            <div class="footer-inner vstack items-center gap-4 sm:gap-6 xl:gap-8 text-center"
+                 data-anime="onview: -300; targets: &gt;*; translateY: [24, 0]; opacity: [0, 1]; delay: anime.stagger(100, {start: 200});">
+                <div class="footer-title" style="transform: translateY(0px); opacity: 1;">
+                    <div class="category">
+                        <div class="-rotate-2">
+                            <span class="fs-5 xl:fs-4 text-secondary fw-bold">Connect</span>
+                        </div>
+                    </div>
+                    <!--<h2 class="title h4 sm:h3 xl:h2 mb-0 mt-2 text-white text-uppercase ls-0 rotate-1">Our Community! 🌟</h2>-->
+                </div>
+                <div class="footer-button" style="transform: translateY(0px); opacity: 1;">
+                    <a class="btn btn-md sm:btn-xl xl:btn-2xl px-4 xl:px-6 border border-3 border-black bg-gradient-45n from-secondary to-tertiary contrast-shadow -rotate-2 hover:rotate-0"
+                       style="--shadowColor: var(--color-secondary)"
+                       href="mailto:dumpnpumpnotify@gmail.com">
+                        <span class="text-black">Write email</span>
+                    </a>
+                </div>
+                <div class="footer-media w-full" style="transform: translateY(0px); opacity: 1;">
+                    <ul class="nav-x row child-cols-6 lg:child-cols-3 g-2 sm:g-3 xl:g-4 gap-0 justify-center">
+                        <li>
+                            <div class="vstack gap-2 p-4 sm:p-5 xl:p-8 border border-1 border-gray-100 border-opacity-40 rounded-3 -rotate-1"
+                                 style="background: linear-gradient(20deg, #ffffff17, #0d042c)">
+                                <a class="w-48px lg:w-56px xl:w-64px hover:-rotate-3"
+                                   href="https://x.com/DUMPnPUMPNotify"><img
+                                        src="./index_files/twitter.svg" alt="twitter"></a>
+                                <span>Twitter</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-menu" style="transform: translateY(0px); opacity: 1;">
+                    <ul class="nav-x gap-0 row child-cols-auto justify-center gx-4 gy-2 lg:g-4 fs-5 xl:fs-4">
+                        <li><a href="#info-algo">How it works</a></li>
+                        <li><a href="#roadmap">Roadmap</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#get-access">Get access</a></li>
+                    </ul>
+                </div>
+                <div class="footer-copyright" style="transform: translateY(0px); opacity: 1;">
+                    <p>Pump&Dump Bot © 2024-2025, All rights reserved.</p>
+                </div>
+                <div id="google_translate_element"></div>
+                <div class="footer-image" style="transform: translateY(0px); opacity: 1;">
+                    <img src="./index_files/03.svg" alt="Image">
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<!-- Footer end -->
+
+<!-- include jquery & bootstrap js -->
+<script src="./index_files/jquery.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+<script defer="" src="./index_files/bootstrap.min.js"></script>
+
+<!-- include scripts -->
+<script defer="" src="./index_files/anime.min.js"></script>
+<script src="./index_files/swiper-bundle.min.js"></script>
+<script defer="" src="./index_files/scrollmagic.min.js"></script>
+<script defer="" src="./index_files/typed.min.js"></script>
+<script defer="" src="./index_files/tilt.min.js"></script>
+<script defer="" src="./index_files/split-type.min.js"></script>
+<script defer="" src="./index_files/prettify.min.js"></script>
+<script defer="" src="./index_files/gsap.min.js"></script>
+<script defer="" src="./index_files/magic-cursor.js"></script>
+<script defer="" src="./index_files/data-attr-helper.js"></script>
+<script defer="" src="./index_files/swiper-helper.js"></script>
+<script defer="" src="./index_files/splitype-helper.js"></script>
+<script defer="" src="./index_files/anime-helper.js"></script>
+<script defer="" src="./index_files/typed-helper.js"></script>
+<script defer="" src="./index_files/tilt-helper.js"></script>
+<script defer="" src="./index_files/marquee.js"></script>
+<script defer="" src="./index_files/uikit-components-bs.js"></script>
+
+<!-- include app script -->
+<script defer="" src="./index_files/app.js"></script>
+
+<script>
+    // Schema toggle via URL
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const getSchema = urlParams.get("schema");
+    if (getSchema === "dark") {
+        setDarkMode(1);
+    } else if (getSchema === "light") {
+        setDarkMode(0);
+    }
+</script>
+
+<script>
+    $(document).ready(function(){
+        $('.zoom-image').featherlight({type: 'image'});
+
+        var swiper = new Swiper(".mySwiper", {
+            effect: "coverflow",
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: "auto",
+            coverflowEffect: {
+                rotate: 50,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: true,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+            },
+        });
+    });
+
+    $(document).on('click', '.copy-clipboard', function (e) {
+        e.preventDefault();
+
+        const $button = $(this);
+        const targetClass = '.' + $(this).data('src');
+        const text = $(targetClass).text();
+        const originalHtml = $(this).html();
+
+        // temporary textarea element to help with copying text
+        let textarea = document.createElement('textarea');
+        textarea.value = text;
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textarea);
+
+        $button.html('<i class="fa fa-check"></i> Address copied');
+        $button.addClass('button--filled');
+
+        setTimeout(function() {
+            $button.html(originalHtml);
+            $button.removeClass('button--filled');
+        }, 2000);
+    });
+</script>
+<script type="text/javascript">
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+            { pageLanguage: 'en' },
+            'google_translate_element'
+        );
+    }
+</script>
+</body>
+</html>

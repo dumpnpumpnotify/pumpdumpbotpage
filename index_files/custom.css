@@ -1,0 +1,51 @@
+.wow-font {
+    font-family: var(--heading-font-typeface, sans-serif) !important;
+    color: white;
+}
+
+.text-m-align {
+    text-align: center;
+}
+
+.zoom-image {
+    img {
+        height: auto;
+        width: 135px;
+        min-width: 135px;
+    }
+}
+
+.two-col {
+    gap: 40px 0;
+}
+
+#info-algo {
+    .swiper {
+        width: 100%;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .swiper-slide {
+        background-position: center;
+        background-size: cover;
+        width: 300px;
+    }
+
+    .swiper-slide img {
+        display: block;
+        width: 100%;
+    }
+}
+
+@media (min-width:480px) {
+    .text-m-align {
+        text-align: left;
+    }
+
+    .two-col {
+        display: flex;
+        gap: 40px;
+        justify-content: center;
+    }
+}
