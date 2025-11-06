@@ -2351,36 +2351,47 @@
         
         // Detect and apply font on page load
         function detectAndApplyFont() {
-            // Check cookie
-            const cookieLang = getCookie('googtrans');
             let currentLang = 'en';
             
-            if (cookieLang && cookieLang.includes('/')) {
-                currentLang = cookieLang.split('/')[2];
-            } else {
-                // Check hash
-                const hashLang = window.location.hash;
-                if (hashLang && hashLang.includes('googtrans')) {
-                    const match = hashLang.match(/googtrans\(en\|(\w+(-\w+)?)\)/);
-                    if (match) currentLang = match[1];
-                }
+            // Google Translate changes the <html lang="..."> attribute
+            const htmlLang = document.documentElement.lang;
+            
+            if (htmlLang && htmlLang !== 'en') {
+                currentLang = htmlLang;
             }
             
             applyFontForLanguage(currentLang);
         }
         
-        function getCookie(name) {
-            const value = `; ${document.cookie}`;
-            const parts = value.split(`; ${name}=`);
-            if (parts.length === 2) return parts.pop().split(';').shift();
-        }
-        
-        // Apply immediately and on load
-        detectAndApplyFont();
-        window.addEventListener('load', detectAndApplyFont);
-        
-        // Re-apply after translation changes
-        setInterval(detectAndApplyFont, 500);
+        // Wait for window to fully load
+        window.addEventListener('load', function() {
+            // Initial detection
+            detectAndApplyFont();
+            
+            // Watch for Google Translate widget changes
+            const observer = new MutationObserver(function(mutations) {
+                detectAndApplyFont();
+            });
+            
+            // Observe changes to the Google Translate element
+            const translateElement = document.getElementById('google_translate_element');
+            if (translateElement) {
+                observer.observe(translateElement, {
+                    childList: true,
+                    subtree: true,
+                    attributes: true
+                });
+            }
+            
+            // Also observe body for lang attribute changes (Google Translate adds lang attribute)
+            observer.observe(document.body, {
+                attributes: true,
+                attributeFilter: ['class', 'lang']
+            });
+            
+            // Fallback: check periodically
+            setInterval(detectAndApplyFont, 1000);
+        });
     })();
 </script>
 
