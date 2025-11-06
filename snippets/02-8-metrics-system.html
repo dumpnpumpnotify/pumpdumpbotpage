@@ -1,0 +1,185 @@
+<!-- ============================================================================
+     SNIPPET 2: 8 Metrics Analysis System
+     Insert this NEW section after the "How it Works" section
+     Place it before the existing #info-top-50 section
+     ============================================================================ -->
+
+<!-- Section start: 8 Metrics System -->
+<div id="metrics-system" class="about section panel overflow-hidden">
+    <div class="section-outer panel pt-6 sm:pt-8 lg:pt-9 xl:pt-10">
+        <div class="container sm:max-w-md xl:max-w-lg">
+            <div class="section-inner panel">
+                <div class="section-header panel sm:max-w-500px xl:max-w-800px mx-auto mb-4 sm:mb-6 xl:mb-9 text-center"
+                     data-anime="onview: -300; targets: >*; translateY: [24, 0]; opacity: [0, 1]; delay: anime.stagger(100, {start: 200});">
+                    <div class="category" style="transform: translateY(0px); opacity: 1;">
+                        <div class="-rotate-2">
+                            <span class="fs-5 xl:fs-4 text-secondary fw-bold">Professional Trading Intelligence</span>
+                        </div>
+                    </div>
+                    <h2 class="h4 sm:h3 xl:h2 mb-0 mt-2 text-white text-uppercase ls-0"
+                        style="transform: translateY(0px); opacity: 1;">8 Metrics Analysis System</h2>
+                    <p class="fs-6 sm:fs-5 xl:fs-4 mt-3" style="transform: translateY(0px); opacity: 1;">
+                        Unlike simple price alerts, our bot analyzes multiple data points to filter out false signals and identify real opportunities.
+                    </p>
+                </div>
+                <div class="section-content panel" style="transform: translateY(0px); opacity: 1;">
+                    <div class="row child-cols-12 g-3 sm:g-4">
+                        <!-- Metric 1: Funding Rate -->
+                        <div>
+                            <div class="panel p-3 sm:p-4 xl:px-6 xl:py-5 border border-1 border-gray-100 border-opacity-40 rounded-3 rotate-1"
+                                 style="background: linear-gradient(20deg, #ffffff17, #0d042c)">
+                                <h4 class="h5 xl:h4 stroke-text mb-2">📊 1. Funding Rate</h4>
+                                <p class="fs-6 xl:fs-5 mb-2"><strong>What it is:</strong> The fee that longs pay to shorts (or vice versa) every 8 hours on futures markets.</p>
+                                <p class="fs-6 xl:fs-5 mb-2"><strong>Why it matters:</strong></p>
+                                <ul class="fs-6 xl:fs-5" style="margin-left: 20px;">
+                                    <li><strong>Negative funding</strong> (-0.01% or lower) → Shorts pay longs → Market is oversold → Good for pumps ✅</li>
+                                    <li><strong>Positive funding</strong> (+0.01% or higher) → Longs pay shorts → Market is overbought → Likely correction ⚠️</li>
+                                </ul>
+                                <p class="fs-6 xl:fs-5 text-secondary"><em>Example: "Funding: -0.015% (negative → supports growth)"</em></p>
+                            </div>
+                        </div>
+
+                        <!-- Metric 2: Long/Short Ratio -->
+                        <div>
+                            <div class="panel p-3 sm:p-4 xl:px-6 xl:py-5 border border-1 border-gray-100 border-opacity-40 rounded-3 -rotate-1"
+                                 style="background: linear-gradient(20deg, #ffffff17, #0d042c)">
+                                <h4 class="h5 xl:h4 stroke-text mb-2">⚖️ 2. Long/Short Ratio</h4>
+                                <p class="fs-6 xl:fs-5 mb-2"><strong>What it is:</strong> The ratio of traders in long positions vs short positions.</p>
+                                <p class="fs-6 xl:fs-5 mb-2"><strong>Why it matters:</strong></p>
+                                <ul class="fs-6 xl:fs-5" style="margin-left: 20px;">
+                                    <li><strong>Ratio > 2.5</strong> → Too many longs → Likely liquidation cascade ⚠️</li>
+                                    <li><strong>Ratio 0.5-2.0</strong> → Balanced market → Good for trend continuation ✅</li>
+                                    <li><strong>Ratio < 0.25</strong> → Crowd is in shorts → Potential short squeeze 🚀</li>
+                                </ul>
+                                <p class="fs-6 xl:fs-5 text-secondary"><em>Example: "Long/Short: 1.35 (few longs → good for growth)"</em></p>
+                            </div>
+                        </div>
+
+                        <!-- Metric 3: CVD -->
+                        <div>
+                            <div class="panel p-3 sm:p-4 xl:px-6 xl:py-5 border border-1 border-gray-100 border-opacity-40 rounded-3 rotate-1"
+                                 style="background: linear-gradient(20deg, #ffffff17, #0d042c)">
+                                <h4 class="h5 xl:h4 stroke-text mb-2">💹 3. CVD (Cumulative Volume Delta)</h4>
+                                <p class="fs-6 xl:fs-5 mb-2"><strong>What it is:</strong> The cumulative difference between buy volume and sell volume (updated in real-time via WebSocket).</p>
+                                <p class="fs-6 xl:fs-5 mb-2"><strong>Why it matters:</strong></p>
+                                <ul class="fs-6 xl:fs-5" style="margin-left: 20px;">
+                                    <li><strong>Positive CVD</strong> (+1000+) during price rise → Real demand, strong signal ✅</li>
+                                    <li><strong>Negative CVD</strong> (-1000+) during price rise → Divergence, fake pump ⚠️</li>
+                                    <li><strong>Strong CVD absorption</strong> → Big players accumulating/distributing 🐋</li>
+                                </ul>
+                                <p class="fs-6 xl:fs-5 text-secondary"><em>Example: "CVD: +1245 BTC (buyers active)"</em></p>
+                            </div>
+                        </div>
+
+                        <!-- Metric 4: Volume Analysis -->
+                        <div>
+                            <div class="panel p-3 sm:p-4 xl:px-6 xl:py-5 border border-1 border-gray-100 border-opacity-40 rounded-3 -rotate-1"
+                                 style="background: linear-gradient(20deg, #ffffff17, #0d042c)">
+                                <h4 class="h5 xl:h4 stroke-text mb-2">📊 4. Volume Analysis</h4>
+                                <p class="fs-6 xl:fs-5 mb-2"><strong>What it detects:</strong> Unusual volume patterns that signal distribution or accumulation.</p>
+                                <p class="fs-6 xl:fs-5 mb-2"><strong>Key patterns:</strong></p>
+                                <ul class="fs-6 xl:fs-5" style="margin-left: 20px;">
+                                    <li><strong>3x+ volume on highs</strong> → "Sold to the crowd" → Likely reversal ⚠️</li>
+                                    <li><strong>3x+ volume on lows</strong> → Panic selling → Opportunity to buy ✅</li>
+                                    <li><strong>Normal volume</strong> → Trend continuation likely 📈</li>
+                                </ul>
+                                <p class="fs-6 xl:fs-5 text-secondary"><em>Example: "⚠️ Giant volumes on highs - likely sold to crowd"</em></p>
+                            </div>
+                        </div>
+
+                        <!-- Metric 5: OI Divergence -->
+                        <div>
+                            <div class="panel p-3 sm:p-4 xl:px-6 xl:py-5 border border-1 border-gray-100 border-opacity-40 rounded-3 rotate-1"
+                                 style="background: linear-gradient(20deg, #ffffff17, #0d042c)">
+                                <h4 class="h5 xl:h4 stroke-text mb-2">📈 5. Open Interest Divergence</h4>
+                                <p class="fs-6 xl:fs-5 mb-2"><strong>What it is:</strong> Comparing price movement with Open Interest (total open positions).</p>
+                                <p class="fs-6 xl:fs-5 mb-2"><strong>Key signals:</strong></p>
+                                <ul class="fs-6 xl:fs-5" style="margin-left: 20px;">
+                                    <li><strong>Price +10%, OI -10%</strong> → Fake pump, positions closing ⚠️</li>
+                                    <li><strong>OI +30%, price sideways</strong> → "Milking phase", big move coming 🎯</li>
+                                    <li><strong>OI & price rising together</strong> → Strong trend ✅</li>
+                                </ul>
+                                <p class="fs-6 xl:fs-5 text-secondary"><em>Example: "🚨 Fake pump: OI falling while price rises"</em></p>
+                            </div>
+                        </div>
+
+                        <!-- Metric 6: Liquidations -->
+                        <div>
+                            <div class="panel p-3 sm:p-4 xl:px-6 xl:py-5 border border-1 border-gray-100 border-opacity-40 rounded-3 -rotate-1"
+                                 style="background: linear-gradient(20deg, #ffffff17, #0d042c)">
+                                <h4 class="h5 xl:h4 stroke-text mb-2">⚡ 6. Liquidations Tracking</h4>
+                                <p class="fs-6 xl:fs-5 mb-2"><strong>What it monitors:</strong> Mass forced closures of overleveraged positions (via WebSocket real-time data).</p>
+                                <p class="fs-6 xl:fs-5 mb-2"><strong>Trading signals:</strong></p>
+                                <ul class="fs-6 xl:fs-5" style="margin-left: 20px;">
+                                    <li><strong>>$1M longs liquidated</strong> (SELL) in 15 min → Potential reversal up ✅</li>
+                                    <li><strong>>$1M shorts liquidated</strong> (BUY) in 15 min → Fake pump, likely pullback ⚠️</li>
+                                    <li><strong>Liquidation clusters</strong> → Strong support/resistance levels 📍</li>
+                                </ul>
+                                <p class="fs-6 xl:fs-5 text-secondary"><em>Example: "⚡ $2.5M longs liquidated in 15 min → reversal possible"</em></p>
+                            </div>
+                        </div>
+
+                        <!-- Metric 7: Historical Extremes -->
+                        <div>
+                            <div class="panel p-3 sm:p-4 xl:px-6 xl:py-5 border border-1 border-gray-100 border-opacity-40 rounded-3 rotate-1"
+                                 style="background: linear-gradient(20deg, #ffffff17, #0d042c)">
+                                <h4 class="h5 xl:h4 stroke-text mb-2">🔻🔺 7. Historical Minimums & Maximums</h4>
+                                <p class="fs-6 xl:fs-5 mb-2"><strong>What it tracks:</strong> All-time lows (ATL) and all-time highs (ATH) for every pair.</p>
+                                <p class="fs-6 xl:fs-5 mb-2"><strong>Trading opportunities:</strong></p>
+                                <ul class="fs-6 xl:fs-5" style="margin-left: 20px;">
+                                    <li><strong>New ATL</strong> → Potential reversal zone, good for long entries 🟢</li>
+                                    <li><strong>New ATH</strong> → Resistance zone, consider profit-taking or shorting 🔴</li>
+                                    <li><strong>ATH breakout</strong> → Possible start of new bull trend 🚀</li>
+                                </ul>
+                                <p class="fs-6 xl:fs-5 text-secondary"><em>Independent alerts: /historicalon, /historicaloff, /maxon, /maxoff</em></p>
+                            </div>
+                        </div>
+
+                        <!-- Metric 8: Smart Scoring -->
+                        <div>
+                            <div class="panel p-3 sm:p-4 xl:px-6 xl:py-5 border border-1 border-gray-100 border-opacity-40 rounded-3 -rotate-1"
+                                 style="background: linear-gradient(20deg, #ffffff17, #0d042c)">
+                                <h4 class="h5 xl:h4 stroke-text mb-2">⭐ 8. Smart Scoring System</h4>
+                                <p class="fs-6 xl:fs-5 mb-2"><strong>What it does:</strong> Combines all 7 metrics into a single 0-8 star rating for each signal.</p>
+                                <p class="fs-6 xl:fs-5 mb-2"><strong>How it works:</strong></p>
+                                <ul class="fs-6 xl:fs-5" style="margin-left: 20px;">
+                                    <li><strong>⭐⭐⭐⭐⭐⭐⭐⭐ (8/8)</strong> → Perfect signal, all metrics aligned</li>
+                                    <li><strong>⭐⭐⭐⭐⭐ (5-7/8)</strong> → Strong signal, trade with confidence 🟢</li>
+                                    <li><strong>⭐⭐⭐ (3-4/8)</strong> → Weak signal, trade with caution 🟡</li>
+                                    <li><strong>⭐ (0-2/8)</strong> → Poor signal, avoid trading 🔴</li>
+                                </ul>
+                                <p class="fs-6 xl:fs-5 text-secondary"><em>Example: "Confidence: ⭐⭐⭐⭐⭐ (5/8)"</em></p>
+                            </div>
+                        </div>
+
+                        <!-- LONG/SHORT Recommendations -->
+                        <div>
+                            <div class="panel p-3 sm:p-4 xl:px-6 xl:py-5 border border-2 border-secondary rounded-3"
+                                 style="background: linear-gradient(45deg, #1a1a2e, #16213e)">
+                                <h4 class="h5 xl:h4 text-secondary mb-3">🎯 LONG/SHORT Recommendations</h4>
+                                <p class="fs-6 xl:fs-5 mb-2">Based on the Smart Scoring system, the bot provides clear trading recommendations:</p>
+                                <ul class="fs-6 xl:fs-5" style="margin-left: 20px;">
+                                    <li><strong>🟢 LONG Recommendation</strong> → Score ≥4, bullish metrics aligned (negative funding, low L/S ratio, positive CVD, etc.)</li>
+                                    <li><strong>🔴 SHORT Recommendation</strong> → Score ≥4, bearish metrics aligned (positive funding, high L/S ratio, negative CVD, etc.)</li>
+                                    <li><strong>🟡 Weak Signal</strong> → Score <4, mixed signals, trade cautiously or wait</li>
+                                </ul>
+                                <p class="fs-6 xl:fs-5 mt-3 text-white"><strong>Example notification:</strong></p>
+                                <div class="p-3 mt-2 rounded-2" style="background: rgba(0,0,0,0.3); font-family: monospace; font-size: 0.85rem;">
+                                    🟢 RECOMMENDATION: OPEN LONG<br>
+                                    Confidence: ⭐⭐⭐⭐⭐ (5/8)<br><br>
+                                    Reasons:<br>
+                                    ✅ Pump +5.23%<br>
+                                    ✅ Funding supports growth<br>
+                                    ✅ Few longs, good for growth<br>
+                                    ✅ CVD confirms growth<br>
+                                    ✅ High volume: +45%
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Section end -->
