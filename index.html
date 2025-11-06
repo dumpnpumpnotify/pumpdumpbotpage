@@ -2427,6 +2427,117 @@
         }, 2000);
     });
 </script>
+
+<!-- Font Language Switcher -->
+<script type="text/javascript">
+    (function() {
+        // Language-specific font configurations
+        const fontConfigs = {
+            // Cyrillic languages (Bilgres doesn't support Cyrillic)
+            'ru': { 
+                primary: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
+                secondary: 'Georgia, "Times New Roman", serif'
+            },
+            'uk': { 
+                primary: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
+                secondary: 'Georgia, "Times New Roman", serif'
+            },
+            // Polish uses Latin Extended (Bilgres might not have all characters)
+            'pl': { 
+                primary: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
+                secondary: 'Georgia, "Times New Roman", serif'
+            },
+            // Chinese requires specific fonts
+            'zh-CN': { 
+                primary: '-apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", "微软雅黑", sans-serif',
+                secondary: '"Songti SC", "STSong", serif'
+            },
+            // Hindi/Devanagari
+            'hi': { 
+                primary: '-apple-system, BlinkMacSystemFont, "Noto Sans Devanagari", "Segoe UI", sans-serif',
+                secondary: '"Noto Serif Devanagari", serif'
+            },
+            // Bengali
+            'bn': { 
+                primary: '-apple-system, BlinkMacSystemFont, "Noto Sans Bengali", "Segoe UI", sans-serif',
+                secondary: '"Noto Serif Bengali", serif'
+            },
+            // Kazakh (Cyrillic)
+            'kk': { 
+                primary: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
+                secondary: 'Georgia, "Times New Roman", serif'
+            }
+            // Latin languages (en, es, fr, de, da, pt) - use default Bilgres
+        };
+        
+        function applyFontForLanguage(lang) {
+            const config = fontConfigs[lang];
+            if (config) {
+                // Create or update style element
+                let styleEl = document.getElementById('lang-font-override');
+                if (!styleEl) {
+                    styleEl = document.createElement('style');
+                    styleEl.id = 'lang-font-override';
+                    document.head.appendChild(styleEl);
+                }
+                
+                styleEl.textContent = `
+                    :root {
+                        --font-family-primary: ${config.primary} !important;
+                        --font-family-secondary: ${config.secondary} !important;
+                        --font-family-tertiary: ${config.primary} !important;
+                    }
+                    body {
+                        font-family: ${config.primary} !important;
+                    }
+                    h1, h2, h3, h4, h5, h6 {
+                        font-family: ${config.secondary} !important;
+                    }
+                `;
+            } else {
+                // Remove override for Latin languages
+                const styleEl = document.getElementById('lang-font-override');
+                if (styleEl) {
+                    styleEl.remove();
+                }
+            }
+        }
+        
+        // Detect and apply font on page load
+        function detectAndApplyFont() {
+            // Check cookie
+            const cookieLang = getCookie('googtrans');
+            let currentLang = 'en';
+            
+            if (cookieLang && cookieLang.includes('/')) {
+                currentLang = cookieLang.split('/')[2];
+            } else {
+                // Check hash
+                const hashLang = window.location.hash;
+                if (hashLang && hashLang.includes('googtrans')) {
+                    const match = hashLang.match(/googtrans\(en\|(\w+(-\w+)?)\)/);
+                    if (match) currentLang = match[1];
+                }
+            }
+            
+            applyFontForLanguage(currentLang);
+        }
+        
+        function getCookie(name) {
+            const value = `; ${document.cookie}`;
+            const parts = value.split(`; ${name}=`);
+            if (parts.length === 2) return parts.pop().split(';').shift();
+        }
+        
+        // Apply immediately and on load
+        detectAndApplyFont();
+        window.addEventListener('load', detectAndApplyFont);
+        
+        // Re-apply after translation changes
+        setInterval(detectAndApplyFont, 500);
+    })();
+</script>
+
 <script type="text/javascript">
     function googleTranslateElementInit() {
         new google.translate.TranslateElement({
@@ -2442,8 +2553,6 @@
         const dropdown = document.getElementById('languageDropdown');
         const options = document.getElementById('languageOptions');
         const langOptions = document.querySelectorAll('.language-option');
-        
-        console.log('📋 Found ' + langOptions.length + ' language options');
         
         // Toggle dropdown
         dropdown.addEventListener('click', function(e) {
@@ -2462,8 +2571,6 @@
         langOptions.forEach(option => {
             option.addEventListener('click', function(e) {
                 const langCode = this.getAttribute('data-lang');
-                console.log('🌍 Language option clicked: ' + langCode);
-                
                 e.stopPropagation();
                 
                 // Update selected state
@@ -2487,8 +2594,6 @@
         
         // Function to change language via Google Translate
         function changeLanguage(lang) {
-            console.log('🔄 changeLanguage called with: ' + lang);
-            
             // Method 1: Direct cookie + hash method (most reliable)
             if (lang === 'en') {
                 // Clear translation
@@ -2498,7 +2603,6 @@
                 return;
             }
             
-            console.log('🍪 Setting cookie: googtrans=/en/' + lang);
             console.log('🔗 Setting hash: #googtrans(en|' + lang + ')');
             
             // Set both cookie and hash
@@ -2514,12 +2618,8 @@
             setTimeout(function() {
                 // Check cookie
                 const cookieLang = getCookie('googtrans');
-                console.log('🍪 Current googtrans cookie: ' + cookieLang);
-                
                 // Check hash
                 const hashLang = window.location.hash;
-                console.log('🔗 Current hash: ' + hashLang);
-                
                 let currentLang = null;
                 
                 if (cookieLang && cookieLang.includes('/')) {
@@ -2529,13 +2629,10 @@
                     if (match) currentLang = match[1];
                 }
                 
-                console.log('🌐 Detected language code: ' + currentLang);
-                
                 if (currentLang && currentLang !== 'en') {
                     // Update UI to reflect current language
                     const option = document.querySelector(`.language-option[data-lang="${currentLang}"]`);
                     if (option) {
-                        console.log('✅ Updating UI for language: ' + currentLang);
                         langOptions.forEach(opt => opt.classList.remove('selected'));
                         option.classList.add('selected');
                         
