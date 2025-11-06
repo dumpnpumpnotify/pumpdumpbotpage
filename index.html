@@ -130,25 +130,8 @@
             display: none;
         }
 
-        /* Google Translate Widget Styling */
-        #google_translate_element {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            opacity: 0;
-            pointer-events: none;
-            width: 1px;
-            height: 1px;
-            overflow: hidden;
-            z-index: -1;
-        }
-        
-        #google_translate_element * {
-            opacity: 0 !important;
-        }
-        
-        .goog-te-banner-frame,
-        .goog-te-balloon-frame {
+        /* Google Translate Widget - Dark Theme */
+        .goog-te-banner-frame {
             display: none !important;
         }
         
@@ -156,116 +139,39 @@
             top: 0 !important;
         }
         
-        /* Custom Language Selector */
-        .custom-language-selector {
-            position: relative;
-            display: inline-block;
-            margin-top: 0.5rem;
+        #google_translate_element {
+            margin-top: 1rem;
         }
         
-        .language-dropdown {
-            background: linear-gradient(20deg, #ffffff17, #0d042c);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 12px;
-            padding: 12px 40px 12px 16px;
-            color: white;
-            font-size: 15px;
-            cursor: pointer;
-            min-width: 200px;
-            transition: all 0.3s ease;
-            position: relative;
-            display: flex;
-            align-items: center;
-            gap: 10px;
+        /* Style the Google Translate dropdown for dark theme */
+        .goog-te-gadget {
+            color: #fff !important;
+            font-family: inherit !important;
         }
         
-        .language-dropdown:hover {
-            border-color: #FFBA00;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(255, 186, 0, 0.3);
+        .goog-te-gadget-simple {
+            background-color: rgba(255, 255, 255, 0.1) !important;
+            border: 1px solid rgba(255, 255, 255, 0.2) !important;
+            border-radius: 8px !important;
+            padding: 8px 12px !important;
+            font-size: 14px !important;
         }
         
-        .language-dropdown::after {
-            content: '▼';
-            position: absolute;
-            right: 16px;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 12px;
-            transition: transform 0.3s ease;
+        .goog-te-gadget-simple:hover {
+            background-color: rgba(255, 255, 255, 0.15) !important;
+            border-color: #FFBA00 !important;
         }
         
-        .language-dropdown.active::after {
-            transform: translateY(-50%) rotate(180deg);
+        .goog-te-gadget-simple span {
+            color: #fff !important;
         }
         
-        .language-options {
-            position: absolute;
-            bottom: 100%;
-            left: 0;
-            right: 0;
-            background: linear-gradient(135deg, #1a1a2e, #16213e);
-            border: 1px solid rgba(255, 186, 0, 0.3);
-            border-radius: 12px;
-            margin-bottom: 8px;
-            max-height: 300px;
-            overflow-y: auto;
-            opacity: 0;
-            visibility: hidden;
-            transform: translateY(10px);
-            transition: all 0.3s ease;
-            z-index: 1000;
-            box-shadow: 0 -8px 32px rgba(0, 0, 0, 0.5);
+        .goog-te-gadget-simple img {
+            filter: brightness(0) invert(1);
         }
         
-        .language-options.show {
-            opacity: 1;
-            visibility: visible;
-            transform: translateY(0);
-        }
-        
-        .language-option {
-            padding: 12px 16px;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            color: rgba(255, 255, 255, 0.9);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-        }
-        
-        .language-option:last-child {
-            border-bottom: none;
-        }
-        
-        .language-option:hover {
-            background: rgba(255, 186, 0, 0.1);
-            padding-left: 20px;
-        }
-        
-        .language-option.selected {
-            background: rgba(255, 186, 0, 0.2);
-            color: #FFBA00;
-            font-weight: 600;
-        }
-        
-        .language-options::-webkit-scrollbar {
-            width: 8px;
-        }
-        
-        .language-options::-webkit-scrollbar-track {
-            background: rgba(0, 0, 0, 0.2);
-            border-radius: 4px;
-        }
-        
-        .language-options::-webkit-scrollbar-thumb {
-            background: rgba(255, 186, 0, 0.5);
-            border-radius: 4px;
-        }
-        
-        .language-options::-webkit-scrollbar-thumb:hover {
-            background: rgba(255, 186, 0, 0.7);
+        .goog-te-menu-value span {
+            color: #fff !important;
         }
     </style>
 
@@ -2269,66 +2175,6 @@
                 <div class="footer-translate" style="transform: translateY(0px); opacity: 1;">
                     <p class="text-white text-opacity-70 fs-6 mb-2">🌍 Translate this page:</p>
                     <div id="google_translate_element"></div>
-                    <div class="custom-language-selector">
-                        <div class="language-dropdown" id="languageDropdown">
-                            <span class="flag">🇬🇧</span>
-                            <span class="lang-name">English</span>
-                        </div>
-                        <div class="language-options" id="languageOptions">
-                            <div class="language-option selected" data-lang="en" data-flag="🇬🇧">
-                                <span class="flag">🇬🇧</span>
-                                <span>English</span>
-                            </div>
-                            <div class="language-option" data-lang="ru" data-flag="🇷🇺">
-                                <span class="flag">🇷🇺</span>
-                                <span>Русский</span>
-                            </div>
-                            <div class="language-option" data-lang="uk" data-flag="🇺🇦">
-                                <span class="flag">🇺🇦</span>
-                                <span>Українська</span>
-                            </div>
-                            <div class="language-option" data-lang="pl" data-flag="🇵🇱">
-                                <span class="flag">🇵🇱</span>
-                                <span>Polski</span>
-                            </div>
-                            <div class="language-option" data-lang="zh-CN" data-flag="🇨🇳">
-                                <span class="flag">🇨🇳</span>
-                                <span>简体中文</span>
-                            </div>
-                            <div class="language-option" data-lang="hi" data-flag="🇮🇳">
-                                <span class="flag">🇮🇳</span>
-                                <span>हिंदी</span>
-                            </div>
-                            <div class="language-option" data-lang="es" data-flag="🇪🇸">
-                                <span class="flag">🇪🇸</span>
-                                <span>Español</span>
-                            </div>
-                            <div class="language-option" data-lang="fr" data-flag="🇫🇷">
-                                <span class="flag">🇫🇷</span>
-                                <span>Français</span>
-                            </div>
-                            <div class="language-option" data-lang="de" data-flag="🇩🇪">
-                                <span class="flag">🇩🇪</span>
-                                <span>Deutsch</span>
-                            </div>
-                            <div class="language-option" data-lang="da" data-flag="🇩🇰">
-                                <span class="flag">🇩🇰</span>
-                                <span>Dansk</span>
-                            </div>
-                            <div class="language-option" data-lang="pt" data-flag="🇵🇹">
-                                <span class="flag">🇵🇹</span>
-                                <span>Português</span>
-                            </div>
-                            <div class="language-option" data-lang="kk" data-flag="🇰🇿">
-                                <span class="flag">🇰🇿</span>
-                                <span>Қазақша</span>
-                            </div>
-                            <div class="language-option" data-lang="bn" data-flag="🇧🇩">
-                                <span class="flag">🇧🇩</span>
-                                <span>বাংলা</span>
-                            </div>
-                        </div>
-                    </div>
                 </div>
                 <div class="footer-image" style="transform: translateY(0px); opacity: 1;">
                     <img src="./index_files/03.svg" alt="Image">
@@ -2543,115 +2389,9 @@
         new google.translate.TranslateElement({
             pageLanguage: 'en',
             includedLanguages: 'en,ru,uk,pl,zh-CN,hi,es,fr,de,da,pt,kk,bn',
-            layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-            autoDisplay: false
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE
         }, 'google_translate_element');
-        }
-    
-    // Custom Language Selector
-    document.addEventListener('DOMContentLoaded', function() {
-        const dropdown = document.getElementById('languageDropdown');
-        const options = document.getElementById('languageOptions');
-        const langOptions = document.querySelectorAll('.language-option');
-        
-        // Toggle dropdown
-        dropdown.addEventListener('click', function(e) {
-            e.stopPropagation();
-            dropdown.classList.toggle('active');
-            options.classList.toggle('show');
-        });
-        
-        // Close dropdown when clicking outside
-        document.addEventListener('click', function() {
-            dropdown.classList.remove('active');
-            options.classList.remove('show');
-        });
-        
-        // Handle language selection
-        langOptions.forEach(option => {
-            option.addEventListener('click', function(e) {
-                const langCode = this.getAttribute('data-lang');
-                e.stopPropagation();
-                
-                // Update selected state
-                langOptions.forEach(opt => opt.classList.remove('selected'));
-                this.classList.add('selected');
-                
-                // Update dropdown display
-                const flag = this.getAttribute('data-flag');
-                const langName = this.querySelector('span:last-child').textContent;
-                dropdown.querySelector('.flag').textContent = flag;
-                dropdown.querySelector('.lang-name').textContent = langName;
-                
-                // Close dropdown
-                dropdown.classList.remove('active');
-                options.classList.remove('show');
-                
-                // Trigger Google Translate
-                changeLanguage(langCode);
-            });
-        });
-        
-        // Function to change language via Google Translate
-        function changeLanguage(lang) {
-            // Method 1: Direct cookie + hash method (most reliable)
-            if (lang === 'en') {
-                // Clear translation
-                document.cookie = 'googtrans=; path=/; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
-                window.location.hash = '';
-                window.location.reload();
-                return;
-            }
-            
-            console.log('🔗 Setting hash: #googtrans(en|' + lang + ')');
-            
-            // Set both cookie and hash
-            document.cookie = 'googtrans=/en/' + lang + '; path=/; domain=' + window.location.hostname;
-            window.location.hash = '#googtrans(en|' + lang + ')';
-            
-            // Force reload to apply translation
-            window.location.reload();
-        }
-        
-        // Check for existing translation on page load
-        window.addEventListener('load', function() {
-            setTimeout(function() {
-                // Check cookie
-                const cookieLang = getCookie('googtrans');
-                // Check hash
-                const hashLang = window.location.hash;
-                let currentLang = null;
-                
-                if (cookieLang && cookieLang.includes('/')) {
-                    currentLang = cookieLang.split('/')[2];
-                } else if (hashLang && hashLang.includes('googtrans')) {
-                    const match = hashLang.match(/googtrans\(en\|(\w+(-\w+)?)\)/);
-                    if (match) currentLang = match[1];
-                }
-                
-                if (currentLang && currentLang !== 'en') {
-                    // Update UI to reflect current language
-                    const option = document.querySelector(`.language-option[data-lang="${currentLang}"]`);
-                    if (option) {
-                        langOptions.forEach(opt => opt.classList.remove('selected'));
-                        option.classList.add('selected');
-                        
-                        const flag = option.getAttribute('data-flag');
-                        const langName = option.querySelector('span:last-child').textContent;
-                        dropdown.querySelector('.flag').textContent = flag;
-                        dropdown.querySelector('.lang-name').textContent = langName;
-                    }
-                }
-            }, 1000);
-        });
-        
-        // Helper function to get cookie
-        function getCookie(name) {
-            const value = `; ${document.cookie}`;
-            const parts = value.split(`; ${name}=`);
-            if (parts.length === 2) return parts.pop().split(';').shift();
-        }
-    });
+    }
 </script>
 </body>
 </html>
